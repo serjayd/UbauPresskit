@@ -28,5 +28,18 @@
     <string name="contact">Contact Us</string>
     <string name="faq">FAQ</string>
     <string name="presskit">Presskit</string>
+    <string name="goodies_title">Unlock Rewards</string>
+    <string name="goodies_subtitle">Unlock exclusive rewards from Ubau:Techno Thief</string>
+    <string name="goodies_card_title_1">Get Early Access</string>
+    <string name="goodies_card_desc_1">Be the first to play. Sign up for early access.</string>
+    <string name="goodies_card_title_2">Concept Art Pack</string>
+    <string name="goodies_card_desc_2">Behind-the-scenes artwork from the world of The Bleached City.</string>
+    <string name="goodies_card_title_3">Soundtrack Preview</string>
+    <string name="goodies_card_desc_3">Early access to three exclusive tracks from the game.</string>
+    <string name="goodies_card_title_4">Exclusive Wallpaper</string>
+    <string name="goodies_card_desc_4">High-resolution wallpaper for desktop and mobile.</string>
+    <string name="footer_title">UBAU: TECHNO THIEF</string>
+    <string name="footer_desc">© 2026 Ubau: Techno Thief. Published by Absent Mind Studio. All rights reserved.</string>
+    <string name="footer_copyright">Built by The SYMP Studio</string>
 
 </resources>

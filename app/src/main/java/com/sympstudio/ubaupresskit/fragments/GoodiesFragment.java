@@ -1,66 +1,49 @@
 package com.sympstudio.ubaupresskit.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.fragment.app.Fragment;
 import com.sympstudio.ubaupresskit.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link GoodiesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class GoodiesFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public GoodiesFragment() {
-        // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment GoodiesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static GoodiesFragment newInstance(String param1, String param2) {
-        GoodiesFragment fragment = new GoodiesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // Get the Goodies Fragment Layout
+        View view = inflater.inflate(R.layout.fragment_goodies, container, false);
+
+        // Get the IDs of all buttons
+        AppCompatButton btnCard1 = view.findViewById(R.id.goodies_button_card_1);
+        AppCompatButton btnCard2 = view.findViewById(R.id.goodies_button_card_2);
+        AppCompatButton btnCard3 = view.findViewById(R.id.goodies_button_card_3);
+        AppCompatButton btnCard4 = view.findViewById(R.id.goodies_button_card_4);
+
+        // onClick method to transfer to Subscription Fragment (e.g., page)
+        btnCard1.setOnClickListener(v -> openSubscriptionPage());
+        btnCard2.setOnClickListener(v -> openSubscriptionPage());
+        btnCard3.setOnClickListener(v -> openSubscriptionPage());
+        btnCard4.setOnClickListener(v -> openSubscriptionPage());
+
+        return view;
+    }
+
+    // Method for Subscription Fragment
+    private void openSubscriptionPage() {
+        if (getActivity() != null) {
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, new SubscriptionFragment())
+                    .commit();
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_goodies, container, false);
     }
 }
