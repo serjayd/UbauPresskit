@@ -20,7 +20,6 @@
     <string name="subscription">Subscription</string>
     <string name="logo">Logo</string>
     <string name="menu">Menu</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="media">Media</string>
     <string name="developers">Meet Developers</string>
@@ -41,5 +40,19 @@
     <string name="footer_title">UBAU: TECHNO THIEF</string>
     <string name="footer_desc">© 2026 Ubau: Techno Thief. Published by Absent Mind Studio. All rights reserved.</string>
     <string name="footer_copyright">Built by The SYMP Studio</string>
+    <string name="developers_title">SYMP Studio</string>
+    <string name="developers_subtitle">Developers team members that participated in production of Ubau Application</string>
+    <string name="developer_card_name_1">Serjay</string>
+    <string name="developer_card_name_2">Pavlo</string>
+    <string name="developer_card_desc_1">Contributed in Development of Ubau</string>
+    <string name="developer_card_name_3">Merve</string>
+    <string name="developer_card_name_4">Yulia</string>
+    <string name="developer_card_1_github">Github</string>
+    <string name="developer_card_1_linkedin">LinkedIn</string>
+    <string name="developers_follow_title">Follow Us!</string>
+    <string name="link_discord">Discord</string>
+    <string name="link_instagram">Insta</string>
+    <string name="link_youtube">Youtube</string>
+    <string name="link_x">X</string>
 
 </resources>

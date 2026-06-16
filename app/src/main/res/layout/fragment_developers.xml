@@ -1,14 +1,440 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.DevelopersFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/developers_header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/developers_title"
+            style="@style/HeadingOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/developers_title"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/developers_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/developers_subtitle"
+            style="@style/SpanTwo" />
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="2"
+        app:rowCount="2"
+        android:layout_marginBottom="16dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/glass_card"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dev_placeholder"
+                    android:contentDescription="@string/developer_card_name_1"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_name_1"
+                style="@style/HeadingTwo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_desc_1"
+                android:gravity="center"
+                style="@style/BodyTwo"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serjay_github"
+                android:text="@string/developer_card_1_github"
+                style="@style/SpanTwo"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/serjay_linkedin"
+                    android:text="@string/developer_card_1_linkedin"
+                    style="@style/SpanTwo"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/glass_card"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dev_placeholder"
+                    android:contentDescription="@string/developer_card_name_2"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_name_2"
+                style="@style/HeadingTwo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_desc_1"
+                android:gravity="center"
+                style="@style/BodyTwo"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pavlo_github"
+                    android:text="@string/developer_card_1_github"
+                    style="@style/SpanTwo"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pavlo_linkedin"
+                    android:text="@string/developer_card_1_linkedin"
+                    style="@style/SpanTwo"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/glass_card"
+            android:padding="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dev_placeholder"
+                    android:contentDescription="@string/developer_card_name_3"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_name_3"
+                style="@style/HeadingTwo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_desc_1"
+                android:gravity="center"
+                style="@style/BodyTwo"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/merve_github"
+                    android:text="@string/developer_card_1_github"
+                    style="@style/SpanTwo"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/merve_linkedin"
+                    android:text="@string/developer_card_1_linkedin"
+                    style="@style/SpanTwo"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/glass_card"
+            android:padding="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dev_placeholder"
+                    android:contentDescription="@string/developer_card_name_4"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_name_4"
+                style="@style/HeadingTwo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_card_desc_1"
+                android:gravity="center"
+                style="@style/BodyTwo"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yulia_github"
+                    android:text="@string/developer_card_1_github"
+                    style="@style/SpanTwo"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yulia_linkedin"
+                    android:text="@string/developer_card_1_linkedin"
+                    style="@style/SpanTwo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/subscription_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/developers_follow_title"
+            style="@style/HeadingOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/developers_follow_title"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/link_discord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/discord_logo"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/link_discord"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_discord"
+                    style="@style/SpanTwo"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/link_youtube"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/youtube_logo"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/link_youtube"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_youtube"
+                    style="@style/SpanTwo"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/link_x"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/x_logo"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/link_x"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_x"
+                    style="@style/SpanTwo"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/link_instagram"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/instagram_logo"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/link_instagram"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_instagram"
+                    style="@style/SpanTwo"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,66 +1,72 @@
 package com.sympstudio.ubaupresskit.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import com.sympstudio.ubaupresskit.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DevelopersFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class DevelopersFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public DevelopersFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment DevelopersFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static DevelopersFragment newInstance(String param1, String param2) {
-        DevelopersFragment fragment = new DevelopersFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_developers, container, false);
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_developers, container, false);
+        // Get all Links IDs
+
+        // Serjay
+        TextView serjayGithub = view.findViewById(R.id.serjay_github);
+        TextView serjayLinkedin = view.findViewById(R.id.serjay_linkedin);
+        serjayGithub.setOnClickListener(v -> openWebPage("https://github.com/serjayd"));
+        serjayLinkedin.setOnClickListener(v -> openWebPage("https://www.linkedin.com/in/serjayantsibor/"));
+
+        // Pavlo
+        TextView pavloGithub = view.findViewById(R.id.pavlo_github);
+        TextView pavloLinkedin = view.findViewById(R.id.pavlo_linkedin);
+        pavloGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
+        pavloLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
+
+        // Merve
+        TextView merveGithub = view.findViewById(R.id.merve_github);
+        TextView merveLinkedin = view.findViewById(R.id.merve_linkedin);
+        merveGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
+        merveLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
+
+        // Yulia
+        TextView yuliaGithub = view.findViewById(R.id.yulia_github);
+        TextView yuliaLinkedin = view.findViewById(R.id.yulia_linkedin);
+        yuliaGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
+        yuliaLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
+
+        // Get all Follow Us links IDs
+        View linkDiscord = view.findViewById(R.id.link_discord);
+        View linkYoutube = view.findViewById(R.id.link_youtube);
+        View linkX = view.findViewById(R.id.link_x);
+        View linkInstagram = view.findViewById(R.id.link_instagram);
+
+        linkDiscord.setOnClickListener(v -> openWebPage("https://discord.gg/"));
+        linkYoutube.setOnClickListener(v -> openWebPage("https://youtube.com/"));
+        linkX.setOnClickListener(v -> openWebPage("https://x.com/"));
+        linkInstagram.setOnClickListener(v -> openWebPage("https://instagram.com/"));
+
+        return view;
+    }
+    // Open links in browser
+    private void openWebPage(String url) {
+        if (url == null || url.isEmpty()) return;
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+        startActivity(Intent.createChooser(intent, "Open with"));
     }
 }
