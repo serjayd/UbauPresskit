@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_primary">#0D1733</color>
+    <color name="text_secondary">#34406A</color>
+    <color name="text_white">#EEF5FF</color>
+
+
+    <color name="orange_base">#FF991C</color>
+    <color name="orange_dark">#FF5C00</color>
+
+
+    <color name="green_base">#B6FF1F</color>
+
+
+    <color name="blue_light">#4166F5</color>
+    <color name="blue_dark">#34406A</color>
+
+
+    <color name="bg_primary">#080D1F</color>
+
+</resources>

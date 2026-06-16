@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Ubau: Techno Thief</string>
+    <string name="home_title">Home Page</string>
+
+
+    <string name="subscription_title">Almost There!</string>
+    <string name="subscription_subtitle">Sign up to claim your exclusive rewards and get early access to The Bleached City.</string>
+
+    <string name="name_hint">John Doe</string>
+    <string name="email_hint">you@example.com</string>
+
+    <string name="subscription_options">Select Your Rewards</string>
+    <string name="subscription_option_1">Concept Art Pack</string>
+    <string name="subscription_option_2">Soundtrack Preview</string>
+    <string name="subscription_option_3">Exclusive Wallpapers</string>
+    <string name="subscription_option_4">Early Game Access</string>
+    <string name="btn_subscribe">Subscribe</string>
+    <string name="home">Home</string>
+    <string name="goodies">Goodies</string>
+    <string name="subscription">Subscription</string>
+    <string name="logo">Logo</string>
+    <string name="menu">Menu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="media">Media</string>
+    <string name="developers">Meet Developers</string>
+    <string name="team">Our Studio</string>
+    <string name="contact">Contact Us</string>
+    <string name="faq">FAQ</string>
+    <string name="presskit">Presskit</string>
+
+</resources>

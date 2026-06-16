@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_media"
+        android:title="@string/media" />
+    <item
+        android:id="@+id/nav_team"
+        android:title="@string/team" />
+    <item
+        android:id="@+id/nav_developers"
+        android:title="@string/developers" />
+    <item
+        android:id="@+id/nav_presskit"
+        android:title="@string/presskit" />
+    <item
+        android:id="@+id/nav_goodies"
+        android:title="@string/goodies" />
+    <item
+        android:id="@+id/nav_faq"
+        android:title="@string/faq" />
+    <item
+        android:id="@+id/nav_contact"
+        android:title="@string/contact" />
+</menu>
