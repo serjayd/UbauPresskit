@@ -42,11 +42,11 @@
     <string name="footer_copyright">Built by The SYMP Studio</string>
     <string name="developers_title">SYMP Studio</string>
     <string name="developers_subtitle">Developers team members that participated in production of Ubau Application</string>
-    <string name="developer_card_name_1">Serjay</string>
-    <string name="developer_card_name_2">Pavlo</string>
+    <string name="developer_card_name_1">Serjay Antsibor</string>
+    <string name="developer_card_name_2">Pavlo Bairamkulov</string>
     <string name="developer_card_desc_1">Contributed in Development of Ubau</string>
-    <string name="developer_card_name_3">Merve</string>
-    <string name="developer_card_name_4">Yulia</string>
+    <string name="developer_card_name_3">Merve Uzuner</string>
+    <string name="developer_card_name_4">Yulia Haponchak</string>
     <string name="developer_card_1_github">Github</string>
     <string name="developer_card_1_linkedin">LinkedIn</string>
     <string name="developers_follow_title">Follow Us!</string>
@@ -54,5 +54,7 @@
     <string name="link_instagram">Insta</string>
     <string name="link_youtube">Youtube</string>
     <string name="link_x">X</string>
+    <string name="link_github">Github</string>
+    <string name="link_linkedin">LinkedIn</string>
 
 </resources>

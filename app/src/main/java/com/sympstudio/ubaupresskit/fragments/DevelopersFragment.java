@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,26 +26,26 @@ public class DevelopersFragment extends Fragment {
         // Get all Links IDs
 
         // Serjay
-        TextView serjayGithub = view.findViewById(R.id.serjay_github);
-        TextView serjayLinkedin = view.findViewById(R.id.serjay_linkedin);
+        ImageView serjayGithub = view.findViewById(R.id.serjay_github);
+        ImageView serjayLinkedin = view.findViewById(R.id.serjay_linkedin);
         serjayGithub.setOnClickListener(v -> openWebPage("https://github.com/serjayd"));
         serjayLinkedin.setOnClickListener(v -> openWebPage("https://www.linkedin.com/in/serjayantsibor/"));
 
         // Pavlo
-        TextView pavloGithub = view.findViewById(R.id.pavlo_github);
-        TextView pavloLinkedin = view.findViewById(R.id.pavlo_linkedin);
+        ImageView pavloGithub = view.findViewById(R.id.pavlo_github);
+        ImageView pavloLinkedin = view.findViewById(R.id.pavlo_linkedin);
         pavloGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
         pavloLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
 
         // Merve
-        TextView merveGithub = view.findViewById(R.id.merve_github);
-        TextView merveLinkedin = view.findViewById(R.id.merve_linkedin);
+        ImageView merveGithub = view.findViewById(R.id.merve_github);
+        ImageView merveLinkedin = view.findViewById(R.id.merve_linkedin);
         merveGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
         merveLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
 
         // Yulia
-        TextView yuliaGithub = view.findViewById(R.id.yulia_github);
-        TextView yuliaLinkedin = view.findViewById(R.id.yulia_linkedin);
+        ImageView yuliaGithub = view.findViewById(R.id.yulia_github);
+        ImageView yuliaLinkedin = view.findViewById(R.id.yulia_linkedin);
         yuliaGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
         yuliaLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
 

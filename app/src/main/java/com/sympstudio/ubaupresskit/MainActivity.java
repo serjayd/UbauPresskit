@@ -78,3 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 }
+
+// Goodies remove buttons, only one btn at the end
+// Goodies add lock icon at the top right of the card
+// Goodies Form change substitle to blue dark
+// goodies Form change `Select your rewards` to green
