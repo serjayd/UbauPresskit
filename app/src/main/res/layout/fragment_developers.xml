@@ -31,278 +31,272 @@
             style="@style/SpanTwo" />
     </LinearLayout>
 
-    <androidx.gridlayout.widget.GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:columnCount="2"
-        app:rowCount="2"
-        android:layout_marginBottom="16dp">
+        android:orientation="vertical">
 
-
+        <!-- Card 1 -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             android:background="@drawable/glass_card"
             android:padding="16dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:cardCornerRadius="100dp"
-                app:cardElevation="0dp"
-                android:backgroundTint="@android:color/transparent">
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/dev_placeholder"
-                    android:contentDescription="@string/developer_card_name_1"
-                    android:scaleType="centerCrop" />
-
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/serjay_img"
+                    android:scaleType="centerCrop"/>
             </androidx.cardview.widget.CardView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_name_1"
                 style="@style/HeadingTwo"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_desc_1"
                 android:gravity="center"
                 style="@style/BodyTwo"
-                android:textSize="14sp"
                 android:layout_marginBottom="8dp"/>
+
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/serjay_github"
-                android:text="@string/developer_card_1_github"
-                style="@style/SpanTwo"/>
+                <ImageView
+                    android:id="@+id/serjay_github"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/github_logo"
+                    android:contentDescription="@string/link_github"/>
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
                     android:id="@+id/serjay_linkedin"
-                    android:text="@string/developer_card_1_linkedin"
-                    style="@style/SpanTwo"/>
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/linkedin_logo"
+                    android:contentDescription="@string/link_linkedin"/>
             </LinearLayout>
+
         </LinearLayout>
+
+        <!-- Card 2 -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             android:background="@drawable/glass_card"
             android:padding="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:cardCornerRadius="100dp"
-                app:cardElevation="0dp"
-                android:backgroundTint="@android:color/transparent">
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/dev_placeholder"
-                    android:contentDescription="@string/developer_card_name_2"
-                    android:scaleType="centerCrop" />
-
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/pavlo_img"
+                    android:scaleType="centerCrop"/>
             </androidx.cardview.widget.CardView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_name_2"
                 style="@style/HeadingTwo"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_desc_1"
                 android:gravity="center"
                 style="@style/BodyTwo"
-                android:textSize="14sp"
                 android:layout_marginBottom="8dp"/>
+
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
                     android:id="@+id/pavlo_github"
-                    android:text="@string/developer_card_1_github"
-                    style="@style/SpanTwo"/>
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/github_logo"
+                    android:contentDescription="@string/link_github"/>
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
                     android:id="@+id/pavlo_linkedin"
-                    android:text="@string/developer_card_1_linkedin"
-                    style="@style/SpanTwo"/>
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/linkedin_logo"
+                    android:contentDescription="@string/link_linkedin"/>
             </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
 
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+        </LinearLayout>
+
+        <!-- Card 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/glass_card"
             android:padding="16dp"
+            android:layout_marginBottom="12dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:cardCornerRadius="100dp"
-                app:cardElevation="0dp"
-                android:backgroundTint="@android:color/transparent">
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/dev_placeholder"
-                    android:contentDescription="@string/developer_card_name_3"
-                    android:scaleType="centerCrop" />
-
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/merve_img"
+                    android:scaleType="centerCrop"/>
             </androidx.cardview.widget.CardView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_name_3"
                 style="@style/HeadingTwo"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_desc_1"
                 android:gravity="center"
                 style="@style/BodyTwo"
-                android:textSize="14sp"
                 android:layout_marginBottom="8dp"/>
+
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
                     android:id="@+id/merve_github"
-                    android:text="@string/developer_card_1_github"
-                    style="@style/SpanTwo"/>
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/github_logo"
+                    android:contentDescription="@string/link_github"/>
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
                     android:id="@+id/merve_linkedin"
-                    android:text="@string/developer_card_1_linkedin"
-                    style="@style/SpanTwo"/>
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/linkedin_logo"
+                    android:contentDescription="@string/link_linkedin"/>
             </LinearLayout>
+
         </LinearLayout>
+
+        <!-- Card 4 -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:layout_marginBottom="8dp"
             android:background="@drawable/glass_card"
             android:padding="16dp"
+            android:layout_marginBottom="12dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:cardCornerRadius="100dp"
-                app:cardElevation="0dp"
-                android:backgroundTint="@android:color/transparent">
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/dev_placeholder"
-                    android:contentDescription="@string/developer_card_name_4"
-                    android:scaleType="centerCrop" />
-
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/yulia_img"
+                    android:scaleType="centerCrop"/>
             </androidx.cardview.widget.CardView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_name_4"
                 style="@style/HeadingTwo"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/developer_card_desc_1"
                 android:gravity="center"
                 style="@style/BodyTwo"
-                android:textSize="14sp"
                 android:layout_marginBottom="8dp"/>
+
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
                     android:id="@+id/yulia_github"
-                    android:text="@string/developer_card_1_github"
-                    style="@style/SpanTwo"/>
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/github_logo"
+                    android:contentDescription="@string/link_github"/>
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
                     android:id="@+id/yulia_linkedin"
-                    android:text="@string/developer_card_1_linkedin"
-                    style="@style/SpanTwo"/>
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/linkedin_logo"
+                    android:contentDescription="@string/link_linkedin"/>
             </LinearLayout>
+
         </LinearLayout>
 
-
-
-
-    </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/subscription_header"
