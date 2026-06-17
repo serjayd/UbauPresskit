@@ -8,7 +8,7 @@
     </style>
     <style name="HeadingTwo">
         <item name="android:fontFamily">@font/orbitron_semibold</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/green_base</item>
     </style>
     <style name="HeadingThree">

@@ -1,5 +1,7 @@
 package com.sympstudio.ubaupresskit.fragments;
 
+import static com.sympstudio.ubaupresskit.R.*;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,16 +25,10 @@ public class GoodiesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_goodies, container, false);
 
         // Get the IDs of all buttons
-        AppCompatButton btnCard1 = view.findViewById(R.id.goodies_button_card_1);
-        AppCompatButton btnCard2 = view.findViewById(R.id.goodies_button_card_2);
-        AppCompatButton btnCard3 = view.findViewById(R.id.goodies_button_card_3);
-        AppCompatButton btnCard4 = view.findViewById(R.id.goodies_button_card_4);
+        AppCompatButton btnSubscribe = view.findViewById(R.id.goodies_button_subscribe);
 
         // onClick method to transfer to Subscription Fragment (e.g., page)
-        btnCard1.setOnClickListener(v -> openSubscriptionPage());
-        btnCard2.setOnClickListener(v -> openSubscriptionPage());
-        btnCard3.setOnClickListener(v -> openSubscriptionPage());
-        btnCard4.setOnClickListener(v -> openSubscriptionPage());
+        btnSubscribe.setOnClickListener(v -> openSubscriptionPage());
 
         return view;
     }
