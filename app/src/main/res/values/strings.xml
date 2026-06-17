@@ -8,6 +8,9 @@
 
     <string name="name_hint">John Doe</string>
     <string name="email_hint">you@example.com</string>
+    <string name="name_form_label">Your Name</string>
+
+    <string name="email_form_label">Your Email</string>
 
     <string name="subscription_options">Select Your Rewards</string>
     <string name="subscription_option_1">Concept Art Pack</string>
@@ -15,6 +18,7 @@
     <string name="subscription_option_3">Exclusive Wallpapers</string>
     <string name="subscription_option_4">Early Game Access</string>
     <string name="btn_subscribe">Subscribe</string>
+    <string name="btn_unlock">Unlock</string>
     <string name="home">Home</string>
     <string name="goodies">Goodies</string>
     <string name="subscription">Subscription</string>
@@ -44,7 +48,8 @@
     <string name="developers_subtitle">Developers team members that participated in production of Ubau Application</string>
     <string name="developer_card_name_1">Serjay Antsibor</string>
     <string name="developer_card_name_2">Pavlo Bairamkulov</string>
-    <string name="developer_card_desc_1">Contributed in Development of Ubau</string>
+    <string name="developer_card_desc_1">Developer</string>
+    <string name="developer_card_desc_2">UI | UX Designer</string>
     <string name="developer_card_name_3">Merve Uzuner</string>
     <string name="developer_card_name_4">Yulia Haponchak</string>
     <string name="developer_card_1_github">Github</string>

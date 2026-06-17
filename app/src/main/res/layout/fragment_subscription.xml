@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="32dp">
 
             <TextView
                 android:id="@+id/subscription_title"
@@ -32,38 +32,73 @@
                 android:id="@+id/subscription_subtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/SpanTwo"
                 android:text="@string/subscription_subtitle" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/subscription_form"
+            android:id="@+id/subscription_form_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/name_label"
+                style="@style/SpanThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="@string/name_form_label"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/name_input"
                 style="@style/BodyTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints=""
+                android:autofillHints="@string/name_hint"
                 android:background="@drawable/glass_card"
                 android:hint="@string/name_hint"
-                android:inputType="text"
-                android:padding="10dp"
-                android:layout_marginBottom="8dp" />
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/subscription_form_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/email_label"
+                style="@style/SpanThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="@string/email_form_label"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/email_input"
                 style="@style/BodyTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints=""
+                android:autofillHints="@string/email_hint"
                 android:background="@drawable/glass_card"
                 android:hint="@string/email_hint"
                 android:inputType="textEmailAddress"
-                android:padding="10dp" />
+                android:minHeight="48dp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp"
+                android:textCursorDrawable="@null" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -77,14 +112,14 @@
 
             <TextView
                 android:id="@+id/subscription_options"
-                style="@style/HeadingThree"
+                style="@style/HeadingTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/subscription_options" />
 
             <CheckBox
                 android:id="@+id/subscription_option_4"
-                style="@style/BodyTwo"
+                style="@style/BodyOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
@@ -92,21 +127,21 @@
 
             <CheckBox
                 android:id="@+id/subscription_option_1"
-                style="@style/BodyTwo"
+                style="@style/BodyOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/subscription_option_1" />
 
             <CheckBox
                 android:id="@+id/subscription_option_2"
-                style="@style/BodyTwo"
+                style="@style/BodyOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/subscription_option_2" />
 
             <CheckBox
                 android:id="@+id/subscription_option_3"
-                style="@style/BodyTwo"
+                style="@style/BodyOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/subscription_option_3" />
@@ -115,7 +150,8 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/subscribe_button"
             style="@style/SpanOne"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_gradient_btn"
             android:text="@string/btn_subscribe" />
