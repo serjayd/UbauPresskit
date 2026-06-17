@@ -1,15 +1,41 @@
 <resources>
     <string name="app_name">Ubau: Techno Thief</string>
+
+    <!-- Home Page -->
     <string name="home_title">Home Page</string>
 
+    <!-- Presskit Page -->
 
+
+    <!-- Media Page -->
+
+
+    <!-- Contact Page -->
+
+
+    <!-- Goodies Page -->
+    <string name="goodies_title">Unlock Rewards</string>
+    <string name="goodies_subtitle">Unlock exclusive rewards from Ubau:Techno Thief</string>
+
+    <string name="goodies_card_title_1">Get Early Access</string>
+    <string name="goodies_card_title_2">Concept Art Pack</string>
+    <string name="goodies_card_title_3">Soundtrack Preview</string>
+    <string name="goodies_card_title_4">Exclusive Wallpaper</string>
+
+    <string name="goodies_card_desc_1">Be the first to play. Sign up for early access.</string>
+    <string name="goodies_card_desc_2">Behind-the-scenes artwork from the world of The Bleached City.</string>
+    <string name="goodies_card_desc_3">Early access to three exclusive tracks from the game.</string>
+    <string name="goodies_card_desc_4">High-resolution wallpaper for desktop and mobile.</string>
+
+    <string name="btn_unlock">Unlock</string>
+
+    <!-- Subscription Page -->
     <string name="subscription_title">Almost There!</string>
-    <string name="subscription_subtitle">Sign up to claim your exclusive rewards and get early access to The Bleached City.</string>
+    <string name="subscription_subtitle">Sign up to claim your exclusive rewards and get early access to the Ubau: Techno Thief.</string>
 
     <string name="name_hint">John Doe</string>
     <string name="email_hint">you@example.com</string>
     <string name="name_form_label">Your Name</string>
-
     <string name="email_form_label">Your Email</string>
 
     <string name="subscription_options">Select Your Rewards</string>
@@ -17,49 +43,59 @@
     <string name="subscription_option_2">Soundtrack Preview</string>
     <string name="subscription_option_3">Exclusive Wallpapers</string>
     <string name="subscription_option_4">Early Game Access</string>
+
     <string name="btn_subscribe">Subscribe</string>
-    <string name="btn_unlock">Unlock</string>
+
+    <!-- Developers Page -->
+    <string name="developers_title">SYMP Studio</string>
+    <string name="developers_subtitle">A dedicated team of SAE students who collaborated on the creation of the Ubau application.</string>
+
+    <string name="developer_card_name_1">Serjay Antsibor</string>
+    <string name="developer_card_name_2">Pavlo Bairamkulov</string>
+    <string name="developer_card_name_3">Merve Uzuner</string>
+    <string name="developer_card_name_4">Yulia Haponchak</string>
+
+    <string name="developer_card_desc_1">Worked on the overall app structure and UI implementation, including fragment navigation and layout design. Contributed to building reusable components and integrating core features across the project.</string>
+    <string name="developer_card_desc_2">Focused on backend logic and application functionality. Implemented key features, handled data processing, and supported integration between UI and core app logic to ensure stable performance.</string>
+    <string name="developer_card_desc_3">Responsible for UI/UX design and visual consistency. Designed interface elements, improved user experience flow, and helped refine the app’s overall look and usability.</string>
+    <string name="developer_card_desc_4">Worked on feature implementation and testing. Assisted in debugging, improving app stability, and ensuring smooth interaction between different parts of the application.</string>
+
+    <string name="link_github">Github</string>
+    <string name="link_linkedin">LinkedIn</string>
+
+    <string name="developers_follow_title">Follow Us!</string>
+
+    <string name="link_discord">Discord</string>
+    <string name="link_instagram">Insta</string>
+    <string name="link_youtube">Youtube</string>
+    <string name="link_x">Twitter</string>
+
+    <!-- Team Page -->
+
+
+    <!-- FAQ Page -->
+
+
+    <!-- Header -->
     <string name="home">Home</string>
     <string name="goodies">Goodies</string>
     <string name="subscription">Subscription</string>
-    <string name="logo">Logo</string>
-    <string name="menu">Menu</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="media">Media</string>
     <string name="developers">Meet Developers</string>
     <string name="team">Our Studio</string>
     <string name="contact">Contact Us</string>
     <string name="faq">FAQ</string>
     <string name="presskit">Presskit</string>
-    <string name="goodies_title">Unlock Rewards</string>
-    <string name="goodies_subtitle">Unlock exclusive rewards from Ubau:Techno Thief</string>
-    <string name="goodies_card_title_1">Get Early Access</string>
-    <string name="goodies_card_desc_1">Be the first to play. Sign up for early access.</string>
-    <string name="goodies_card_title_2">Concept Art Pack</string>
-    <string name="goodies_card_desc_2">Behind-the-scenes artwork from the world of The Bleached City.</string>
-    <string name="goodies_card_title_3">Soundtrack Preview</string>
-    <string name="goodies_card_desc_3">Early access to three exclusive tracks from the game.</string>
-    <string name="goodies_card_title_4">Exclusive Wallpaper</string>
-    <string name="goodies_card_desc_4">High-resolution wallpaper for desktop and mobile.</string>
+
+    <string name="logo">Logo</string>
+    <string name="menu">Menu</string>
+
+    <!-- Footer -->
     <string name="footer_title">UBAU: TECHNO THIEF</string>
     <string name="footer_desc">© 2026 Ubau: Techno Thief. Published by Absent Mind Studio. All rights reserved.</string>
     <string name="footer_copyright">Built by The SYMP Studio</string>
-    <string name="developers_title">SYMP Studio</string>
-    <string name="developers_subtitle">Developers team members that participated in production of Ubau Application</string>
-    <string name="developer_card_name_1">Serjay Antsibor</string>
-    <string name="developer_card_name_2">Pavlo Bairamkulov</string>
-    <string name="developer_card_desc_1">Developer</string>
-    <string name="developer_card_desc_2">UI | UX Designer</string>
-    <string name="developer_card_name_3">Merve Uzuner</string>
-    <string name="developer_card_name_4">Yulia Haponchak</string>
-    <string name="developer_card_1_github">Github</string>
-    <string name="developer_card_1_linkedin">LinkedIn</string>
-    <string name="developers_follow_title">Follow Us!</string>
-    <string name="link_discord">Discord</string>
-    <string name="link_instagram">Insta</string>
-    <string name="link_youtube">Youtube</string>
-    <string name="link_x">X</string>
-    <string name="link_github">Github</string>
-    <string name="link_linkedin">LinkedIn</string>
+
+    <!--  REMOVE LATER (DO NOT TOUCH)  -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
