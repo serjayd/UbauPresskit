@@ -64,3 +64,40 @@ public class HomeFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }
+
+package com.sympstudio.ubaupresskit.fragments;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+
+import com.sympstudio.ubaupresskit.R;
+
+public class HomeFragment extends Fragment {
+
+    public HomeFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        // Inflate fragment_home.xml
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        // BUY NOW button
+        Button btnBuyNow = view.findViewById(R.id.btnBuyNow);
+        btnBuyNow.setOnClickListener(v -> {
+            // TODO: Add store link (Steam, PlayStation Store, etc.)
+            Toast.makeText(getContext(), "Redirecting to store...", Toast.LENGTH_SHORT).show();
+        });
+
+        return view;
+    }
+}
