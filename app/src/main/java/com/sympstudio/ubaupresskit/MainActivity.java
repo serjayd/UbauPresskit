@@ -77,6 +77,3 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 }
-
-// Goodies Form change substitle to blue dark
-// goodies Form change `Select your rewards` to green
