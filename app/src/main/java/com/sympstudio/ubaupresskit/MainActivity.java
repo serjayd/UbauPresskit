@@ -14,7 +14,6 @@ import com.sympstudio.ubaupresskit.fragments.GoodiesFragment;
 import com.sympstudio.ubaupresskit.fragments.HomeFragment;
 import com.sympstudio.ubaupresskit.fragments.MediaFragment;
 import com.sympstudio.ubaupresskit.fragments.PresskitFragment;
-import com.sympstudio.ubaupresskit.fragments.SubscriptionFragment;
 import com.sympstudio.ubaupresskit.fragments.TeamFragment;
 
 public class MainActivity extends AppCompatActivity {

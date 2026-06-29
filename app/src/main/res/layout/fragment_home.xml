@@ -2,26 +2,25 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- HERO SECTION -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="420dp">
 
-            <!-- Background Image -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/logo"
                 android:src="@drawable/homepage_background_img"
                 android:scaleType="centerCrop" />
 
-            <!-- Title Text Block -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,21 +31,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="UBAU:"
-                    android:style="@style/HeadingOne" />
+                    android:text="@string/home_video_title_ubau"
+                    style="@style/HeadingOne" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TECHNO THIEF"
-                    android:style="@style/HeadingOne"
+                    android:text="@string/home_video_title_techno_thief"
+                    style="@style/HeadingOne"
                     android:textColor="@color/text_white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EVERY SHADOW IS A SANCTUARY; EVERY NOISE IS A THREAT."
-                    android:style="@style/SpanThree"
+                    android:text="@string/home_video_description"
+                    style="@style/SpanThree"
                     android:textColor="@color/text_white"
                     android:textSize="13sp"
                     android:singleLine="true"
@@ -55,7 +54,7 @@
             </LinearLayout>
 
         </RelativeLayout>
-        <!-- OUT NOW ON SECTION -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,12 +67,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OUT NOW ON"
-                android:style="@style/SpanThree"
-                android:textSize="18dp"
+                android:text="@string/home_out_now"
+                style="@style/SpanThree"
+                android:textSize="18sp"
                 android:textColor="@color/green_base" />
 
-            <!-- Platform Logos -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +82,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/playstation_logo"
-                    android:layout_marginRight="12dp" />
+                    android:layout_marginEnd="12dp" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -93,9 +91,8 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
-        <!-- DESCRIPTION SECTION -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,15 +102,13 @@
             android:paddingTop="16dp"
             android:paddingBottom="16dp">
 
-            <!-- Game Description -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="In a world dominated by technocrats, humanity has built concrete towers to reach the heavens. Below, life is a shadow of the past. You play as a child scavenger, dodging a strict robotic curfew to find money to pay for your sick mother's insurance."
-                android:style="@style/BodyTwo"
+                android:text="@string/home_game_description"
+                style="@style/BodyTwo"
                 android:textColor="@color/text_primary" />
 
-            <!-- Divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -121,7 +116,6 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp" />
 
-            <!-- GENRE -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,27 +124,26 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:text="GENRE"
-                    android:style="@style/SpanTwo"
+                    android:text="@string/home_genre_title"
+                    style="@style/SpanTwo"
                     android:textColor="@color/orange_dark" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="•"
+                    android:text="@string/home_dot"
                     android:textColor="@color/green_base"
                     android:textSize="20sp"
-                    android:layout_marginRight="6dp" />
+                    android:layout_marginEnd="6dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stealth Survival"
-                    android:style="@style/BodyTwo"
+                    android:text="@string/home_genre"
+                    style="@style/BodyTwo"
                     android:textColor="@color/text_primary" />
 
             </LinearLayout>
 
-            <!-- LENGTH -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -160,27 +153,26 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:text="LENGTH"
-                    android:style="@style/SpanTwo"
+                    android:text="@string/home_length_title"
+                    style="@style/SpanTwo"
                     android:textColor="@color/orange_dark" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="•"
+                    android:text="@string/home_dot"
                     android:textColor="@color/green_base"
                     android:textSize="20sp"
-                    android:layout_marginRight="6dp" />
+                    android:layout_marginEnd="6dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6 hrs"
-                    android:style="@style/BodyTwo"
+                    android:text="@string/home_length"
+                    style="@style/BodyTwo"
                     android:textColor="@color/text_primary" />
 
             </LinearLayout>
 
-            <!-- AGE -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -190,21 +182,21 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:text="AGE"
-                    android:style="@style/SpanTwo"
+                    android:text="@string/home_age_title"
+                    style="@style/SpanTwo"
                     android:textColor="@color/orange_dark" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PEGI 16+"
-                    android:style="@style/BodyTwo"
+                    android:text="@string/home_age"
+                    style="@style/BodyTwo"
                     android:textColor="@color/text_primary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="•"
+                    android:text="@string/home_dot"
                     android:textColor="@color/green_base"
                     android:textSize="20sp"
                     android:layout_marginLeft="6dp"
@@ -213,145 +205,125 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ESRB T"
-                    android:style="@style/BodyTwo"
+                    android:text="@string/home_esrb_t"
+                    style="@style/BodyTwo"
                     android:textColor="@color/text_primary" />
 
-
             </LinearLayout>
 
+        </LinearLayout>
 
-            <!-- REVIEWS SECTION -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="16dp"
-                android:paddingTop="16dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@drawable/glass_card"
-                    android:padding="16dp">
-
-                    <!-- Review 1 -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="★★★★★"
-                        android:textColor="@color/orange_base"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="&quot;A stunning atmospheric experience.&quot;"
-                        android:style="@style/BodyTwo"
-                        android:textSize="16sp"
-                        android:layout_marginTop="6dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="— GAMESPOT"
-                        android:style="@style/SpanThree"
-                        android:layout_marginTop="6dp" />
-
-                    <!-- Divider -->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/orange_dark"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp" />
-
-                    <!-- Review 2 -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="★★★★★"
-                        android:textColor="@color/orange_base"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="&quot;Hauntingly beautiful world design.&quot;"
-                        android:style="@style/BodyTwo"
-                        android:textSize="16sp"
-                        android:layout_marginTop="6dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="— IGN"
-                        android:style="@style/SpanThree"
-                        android:layout_marginTop="6dp" />
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-            <!-- BUY NOW SECTION -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/glass_card"
-                android:padding="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="16dp">
+                android:padding="16dp">
 
-                <!-- Available Now -->
-                <LinearLayout
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="12dp">
+                    android:text="@string/home_stars"
+                    android:textColor="@color/orange_base"
+                    android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="•"
-                        android:textColor="@color/green_base"
-                        android:textSize="20sp"
-                        android:layout_marginRight="6dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="AVAILABLE NOW"
-                        android:style="@style/SpanTwo"
-                        android:textColor="@color/text_white"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <!-- Buy Now Button -->
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BUY NOW  |  £15.99"
-                    android:background="@drawable/bg_gradient_btn"
-                    android:textColor="@color/bg_primary"
+                    android:text="@string/home_testimonial_1"
+                    style="@style/BodyTwo"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="14dp" />
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_testimonial_user_1"
+                    style="@style/SpanThree"
+                    android:layout_marginTop="6dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/orange_dark"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_stars"
+                    android:textColor="@color/orange_base"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_testimonial_2"
+                    style="@style/BodyTwo"
+                    android:textSize="16sp"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_testimonial_user_2"
+                    style="@style/SpanThree"
+                    android:layout_marginTop="6dp" />
 
             </LinearLayout>
-
-            </LinearLayout>
-
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/glass_card"
+            android:padding="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_available_now"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_buy_now_text"
+                android:background="@drawable/bg_gradient_btn"
+                android:textColor="@color/bg_primary"
+                android:textSize="16sp"
+                android:id="@+id/btnBuyNow"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="14dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
 
 </ScrollView>
