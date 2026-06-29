@@ -61,10 +61,20 @@
                 android:background="@drawable/glass_card"
                 android:hint="@string/name_hint"
                 android:inputType="textPersonName"
+                android:textColor="@color/text_primary"
                 android:minHeight="48dp"
                 android:paddingVertical="8dp"
                 android:paddingHorizontal="16dp"
                 android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/name_error"
+                style="@style/SpanThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/destructive"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -93,11 +103,21 @@
                 android:autofillHints="@string/email_hint"
                 android:background="@drawable/glass_card"
                 android:hint="@string/email_hint"
+                android:textColor="@color/text_primary"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:paddingVertical="8dp"
                 android:paddingHorizontal="16dp"
                 android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/email_error"
+                style="@style/SpanThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/destructive"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

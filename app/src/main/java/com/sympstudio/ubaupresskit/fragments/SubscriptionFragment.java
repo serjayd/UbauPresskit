@@ -1,12 +1,14 @@
 package com.sympstudio.ubaupresskit.fragments;
 
 import android.os.Bundle;
+import android.util.Patterns; // --- ADDED FOR EMAIL CHECK ---
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,12 +25,13 @@ public class SubscriptionFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // 1. Link XML to Subscription Fragment
         View view = inflater.inflate(R.layout.fragment_subscription, container, false);
 
-        // 2. Find all IDs of inputs
         EditText nameInput = view.findViewById(R.id.name_input);
+        TextView nameError = view.findViewById(R.id.name_error);
+
         EditText emailInput = view.findViewById(R.id.email_input);
+        TextView emailError = view.findViewById(R.id.email_error);
 
         CheckBox option1 = view.findViewById(R.id.subscription_option_1);
         CheckBox option2 = view.findViewById(R.id.subscription_option_2);
@@ -37,27 +40,39 @@ public class SubscriptionFragment extends Fragment {
 
         Button subscribeButton = view.findViewById(R.id.subscribe_button);
 
-        // 3. onclick method for Subscribe Button
         subscribeButton.setOnClickListener(v -> {
+            // Reset errors on click
+            nameError.setText("");
+            emailError.setText("");
+
             String name = nameInput.getText().toString().trim();
             String email = emailInput.getText().toString().trim();
 
-            // Check the fields
-            if (name.isEmpty() || email.isEmpty()) {
-                Toast.makeText(getContext(), "Fill out all fields", Toast.LENGTH_SHORT).show();
-            } else {
-                // Store data to DB and send the rewards
+            // Validate Name
+            if (name.isEmpty() || name.length() < 2) {
+                nameError.setText("Name must contain at least 2 characters!");
+            }
+            // Validate Email is not empty
+            else if (email.isEmpty()) {
+                emailError.setText("Please enter your email!");
+            }
+            // Check if email matches standard patterns
+            else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                emailError.setText("Please enter a valid email address!");
+            }
+            // Send Data
+            else {
                 String message = "Thank you, " + name + "! your rewards has been sent to " + email + ".";
                 Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
-                // Clear all fields
+
                 nameInput.setText("");
                 emailInput.setText("");
                 option1.setChecked(true);
                 option2.setChecked(false);
                 option3.setChecked(false);
                 option4.setChecked(false);
+
                 if (getActivity() != null) {
-                    // Return to Home Page after submit button clicked
                     getParentFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     getParentFragmentManager()
                             .beginTransaction()
