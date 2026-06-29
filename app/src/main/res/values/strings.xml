@@ -97,5 +97,25 @@
 
     <!--  REMOVE LATER (DO NOT TOUCH)  -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_game_description">In a world dominated by technocrats, humanity has built concrete towers to reach the heavens. Below, life is a shadow of the past. You play as a child scavenger, dodging a strict robotic curfew to find money to pay for your sick mother\'s insurance.</string>
+    <string name="home_out_now">OUT NOW ON</string>
+    <string name="home_video_description">EVERY SHADOW IS A SANCTUARY; EVERY NOISE IS A THREAT.</string>
+    <string name="home_video_title_techno_thief">TECHNO THIEF</string>
+    <string name="home_video_title_ubau">UBAU:</string>
+    <string name="btn_buy_now_text">BUY NOW | £15.99</string>
+    <string name="home_available_now">AVAILABLE NOW</string>
+    <string name="home_genre_title">GENRE</string>
+    <string name="home_dot">•</string>
+    <string name="home_genre">Stealth Survival</string>
+    <string name="home_length_title">LENGTH</string>
+    <string name="home_length">6 hrs</string>
+    <string name="home_age_title">AGE</string>
+    <string name="home_age">PEGI 16+</string>
+    <string name="home_esrb_t">ESRB T</string>
+    <string name="home_stars">★★★★★</string>
+    <string name="home_testimonial_1">\"A stunning atmospheric experience.\"</string>
+    <string name="home_testimonial_user_1">— GAMESPOT</string>
+    <string name="home_testimonial_2">\"Hauntingly beautiful world design.\"</string>
+    <string name="home_testimonial_user_2">— IGN</string>
 
 </resources>
