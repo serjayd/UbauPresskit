@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Open Home Fragment as the app opens
         if (savedInstanceState == null) {
             replaceFragment(new HomeFragment());
-            navigationView.setCheckedItem(R.id.nav_home); // Show the selected page
+            navigationView.setCheckedItem(R.id.nav_home); // Save Selected Page
         }
 
         // onClick events for nav links in menu
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
 
     // Method to change fragment containers (e.g., pages) inside the Main Activity
     private void replaceFragment(Fragment fragment) {
