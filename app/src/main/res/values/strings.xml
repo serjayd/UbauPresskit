@@ -31,7 +31,12 @@
 
 
     <!-- Contact Page -->
-
+    <string name="contact_title">Get in Touch</string>
+    <string name="contact_name_input">Your Name</string>
+    <string name="message_form_label">Talk to us</string>
+    <string name="message_hint">Your message...</string>
+    <string name="btn_contact">Send Message</string>
+    <string name="contact_subtitle">Have a question or just want to say hello? We\'d love to hear from you!\n\nDrop us a message using the form below.</string>
 
     <!-- Goodies Page -->
     <string name="goodies_title">Unlock Rewards</string>
@@ -117,5 +122,7 @@
 
     <!--  REMOVE LATER (DO NOT DELETE NOW)  -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 
 </resources>
