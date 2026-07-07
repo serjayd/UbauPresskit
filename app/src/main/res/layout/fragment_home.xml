@@ -21,6 +21,12 @@
                 android:src="@drawable/homepage_background_img"
                 android:scaleType="centerCrop" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/homepage_gradient_overlay" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -31,6 +37,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:text="@string/home_video_title_ubau"
                     style="@style/HeadingOne" />
 
@@ -42,12 +49,12 @@
                     android:textColor="@color/text_white"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/home_video_description"
                     style="@style/SpanThree"
                     android:textColor="@color/text_white"
-                    android:textSize="13sp"
+                    android:textSize="11sp"
                     android:singleLine="true"
                     android:layout_marginTop="8dp" />
 
@@ -58,40 +65,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingTop="16dp"
-            android:paddingBottom="16dp">
+            android:paddingBottom="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/home_out_now"
                 style="@style/SpanThree"
-                android:textSize="18sp"
-                android:textColor="@color/orange_dark"/>
+                android:textSize="20sp"
+                android:textColor="@color/orange_dark"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="14dp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
+            <ImageView
+                android:id="@+id/psIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_playstation"
+                android:layout_marginEnd="14dp" />
 
-                <ImageView
-                    android:id="@+id/psIcon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_playstation"
-                    android:layout_marginEnd="16dp" />
-
-                <ImageView
-                    android:id="@+id/microsoftIcon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_microsoft" />
-
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/microsoftIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_microsoft" />
 
         </LinearLayout>
 
@@ -101,7 +102,7 @@
             android:orientation="vertical"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:paddingTop="16dp"
+            android:paddingTop="4dp"
             android:paddingBottom="16dp">
 
             <TextView
