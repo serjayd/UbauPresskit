@@ -23,7 +23,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="125dp"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/homepage_gradient_overlay" />
 
@@ -66,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:gravity="center"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingTop="16dp"
@@ -78,7 +79,6 @@
                 style="@style/SpanThree"
                 android:textSize="20sp"
                 android:textColor="@color/orange_dark"
-                android:layout_marginTop="4dp"
                 android:layout_marginEnd="14dp" />
 
             <ImageView
