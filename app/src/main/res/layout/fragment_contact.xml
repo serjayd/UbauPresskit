@@ -167,4 +167,15 @@
         android:background="@drawable/bg_gradient_btn"
         android:text="@string/btn_contact" />
 
+    <TextView
+        android:id="@+id/contact_view_recent_messages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/contact_view_messages"
+        style="@style/SpanThree" />
+
 </LinearLayout>
