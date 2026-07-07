@@ -70,7 +70,7 @@
                 android:text="@string/home_out_now"
                 style="@style/SpanThree"
                 android:textSize="18sp"
-                android:textColor="@color/green_base" />
+                android:textColor="@color/orange_dark"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -79,15 +79,17 @@
                 android:layout_marginTop="8dp">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/playstation_logo"
-                    android:layout_marginEnd="12dp" />
+                    android:id="@+id/psIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_playstation"
+                    android:layout_marginEnd="16dp" />
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/xbox_logo" />
+                    android:id="@+id/microsoftIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_microsoft" />
 
             </LinearLayout>
 
@@ -112,7 +114,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/orange_dark"
+                android:background="@color/green_base"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp" />
 
@@ -189,6 +191,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/home_dot"
+                    android:textColor="@color/green_base"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/home_age"
                     style="@style/BodyTwo"
                     android:textColor="@color/text_primary" />
@@ -196,11 +206,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home_dot"
-                    android:textColor="@color/green_base"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginRight="6dp" />
+                    android:text=" | "
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_primary" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -253,7 +261,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/orange_dark"
+                    android:background="@color/green_base"
                     android:layout_marginTop="12dp"
                     android:layout_marginBottom="12dp" />
 
