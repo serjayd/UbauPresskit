@@ -96,8 +96,12 @@
     <string name="link_x">Twitter</string>
 
     <!-- Team Page -->
-
-
+    <string name="team_title">Absent Mind Studio</string>
+    <string name="team_desc">Meet the people behind Absent Mind Studio — a team dedicated to crafting memorable gaming experiences.</string>
+    <string name="team_subtitle">Meet the Team</string>
+    <string name="team_card_name_1">Rhiannon</string>
+    <string name="team_card_desc_1">Worked on the overall app structure and UI implementation, including fragment navigation and layout design. Contributed to building reusable components and integrating core features across the project.</string>"
+ 
     <!-- FAQ Page -->
 
 
