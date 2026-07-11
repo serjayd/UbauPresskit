@@ -5,12 +5,13 @@ import android.content.Context;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 
+
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "ubauDB";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
 
     public DBHelper(@Nullable Context context) {
@@ -27,11 +28,18 @@ public class DBHelper extends SQLiteOpenHelper {
                         "concept_art_pack INTEGER, " +
                         "exclusive_wallpapers INTEGER)";
         db.execSQL(query);
+        String contactsQuery = "CREATE TABLE Contacts (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "name TEXT, " +
+                "email TEXT, " +
+                "message TEXT)";
+        db.execSQL(contactsQuery);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS Subscribers");
+        db.execSQL("DROP TABLE IF EXISTS Contacts");
         onCreate(db);
     }
 
@@ -47,6 +55,20 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
         long result = db.insert("Subscribers", null, values);
+
+        db.close();
+
+        return result != -1;
+    }
+    public boolean insertContactMessage(String name, String email, String message) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("name", name);
+        values.put("email", email);
+        values.put("message", message);
+
+        long result = db.insert("Contacts", null, values);
 
         db.close();
 
