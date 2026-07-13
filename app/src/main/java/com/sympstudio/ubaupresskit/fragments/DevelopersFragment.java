@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,56 +19,67 @@ public class DevelopersFragment extends Fragment {
     public DevelopersFragment() {
     }
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
 
-        // Get all Links IDs
 
-        // Serjay
-        ImageView serjayGithub = view.findViewById(R.id.serjay_github);
-        ImageView serjayLinkedin = view.findViewById(R.id.serjay_linkedin);
-        serjayGithub.setOnClickListener(v -> openWebPage("https://github.com/serjayd"));
-        serjayLinkedin.setOnClickListener(v -> openWebPage("https://www.linkedin.com/in/serjayantsibor/"));
+        ListView listView = view.findViewById(R.id.developer_cards);
 
-        // Pavlo
-        ImageView pavloGithub = view.findViewById(R.id.pavlo_github);
-        ImageView pavloLinkedin = view.findViewById(R.id.pavlo_linkedin);
-        pavloGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
-        pavloLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
 
-        // Merve
-        ImageView merveGithub = view.findViewById(R.id.merve_github);
-        ImageView merveLinkedin = view.findViewById(R.id.merve_linkedin);
-        merveGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
-        merveLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
+        int[] images = {
+                R.drawable.serjay_img,
+                R.drawable.merve_img,
+                R.drawable.pavlo_img,
+                R.drawable.yulia_img,
+        };
 
-        // Yulia
-        ImageView yuliaGithub = view.findViewById(R.id.yulia_github);
-        ImageView yuliaLinkedin = view.findViewById(R.id.yulia_linkedin);
-        yuliaGithub.setOnClickListener(v -> openWebPage("https://github.com/"));
-        yuliaLinkedin.setOnClickListener(v -> openWebPage("https://linkedin.com/in/"));
 
-        // Get all Follow Us links IDs
-        View linkDiscord = view.findViewById(R.id.link_discord);
-        View linkYoutube = view.findViewById(R.id.link_youtube);
-        View linkX = view.findViewById(R.id.link_x);
-        View linkInstagram = view.findViewById(R.id.link_instagram);
+        String[] names = {
+                "Serjay Antsibor",
+                "Merve Uzuner",
+                "Pavlo Bairamkulov",
+                "Yuliia Haponchak",
+        };
 
-        linkDiscord.setOnClickListener(v -> openWebPage("https://discord.gg/"));
-        linkYoutube.setOnClickListener(v -> openWebPage("https://youtube.com/"));
-        linkX.setOnClickListener(v -> openWebPage("https://x.com/"));
-        linkInstagram.setOnClickListener(v -> openWebPage("https://instagram.com/"));
+
+        String[] descriptions = {
+                "Worked on the app's core systems, navigation, and helped shape the overall experience",
+                "Designed the interface and gave the app its clean, polished look",
+                "Built and improved the app's functionality, making sure everything runs smoothly",
+                "Implemented features, tested gameplay, and squashed bugs along the way",
+        };
+
+        String[] githubLinks = {
+                "https://github.com/serjayd",
+                "https://github.com/Mervellious",
+                "https://github.com/Paul-webd",
+                "https://github.com/YuliiaHaponchak"
+        };
+
+        String[] linkedinLinks = {
+                "https://www.linkedin.com/in/serjayantsibor",
+                "https://www.linkedin.com/in/merve-uzuner/",
+                "https://www.linkedin.com/in/",
+                "https://www.linkedin.com/in/"
+        };
+
+
+        developerAdapter adapter = new developerAdapter(
+                getContext(),
+                images,
+                names,
+                descriptions,
+                githubLinks,
+                linkedinLinks
+        );
+
+
+        listView.setAdapter(adapter);
+
 
         return view;
-    }
-    // Open links in browser
-    private void openWebPage(String url) {
-        if (url == null || url.isEmpty()) return;
-
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-
-        startActivity(Intent.createChooser(intent, "Open with"));
     }
 }
