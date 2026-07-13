@@ -58,6 +58,7 @@ public class SubscriptionFragment extends Fragment {
                 emailError.setText("Please enter your email!");
             }
             // Check if email matches standard patterns
+            // !CHANGE TO REGEX!
             else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 emailError.setText("Please enter a valid email address!");
             }
