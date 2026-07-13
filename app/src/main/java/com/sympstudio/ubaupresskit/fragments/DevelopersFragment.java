@@ -28,6 +28,8 @@ public class DevelopersFragment extends Fragment {
 
         ListView listView = view.findViewById(R.id.developer_cards);
 
+        animatePage(view);
+
 
         int[] images = {
                 R.drawable.serjay_img,
@@ -81,5 +83,18 @@ public class DevelopersFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void animatePage(View view) {
+
+        view.setAlpha(0f);
+        view.setTranslationY(30f);
+
+        view.animate()
+                .alpha(1f)
+                .translationY(0f)
+                .setDuration(500)
+                .setInterpolator(new android.view.animation.DecelerateInterpolator())
+                .start();
     }
 }

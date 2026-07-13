@@ -1,13 +1,17 @@
 package com.sympstudio.ubaupresskit.fragments;
 
-import android.os.Bundle;
-import android.util.Patterns; // --- ADDED FOR EMAIL CHECK ---
-import android.view.LayoutInflater;
 import android.view.View;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+
+import android.os.Bundle;
+import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -27,7 +31,7 @@ public class SubscriptionFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_subscription, container, false);
-
+        LinearLayout subscriptions_options = view.findViewById(R.id.subscription_options_container);
         EditText nameInput = view.findViewById(R.id.name_input);
         EditText emailInput = view.findViewById(R.id.email_input);
 
@@ -39,6 +43,11 @@ public class SubscriptionFragment extends Fragment {
         TextView emailError = view.findViewById(R.id.email_error);
 
         Button subscribeButton = view.findViewById(R.id.subscribe_button);
+
+        animateCard(nameInput, 0);
+        animateCard(emailInput, 150);
+        animateCard(subscriptions_options, 300);
+        animatePage(view);
 
         subscribeButton.setOnClickListener(v -> {
 
@@ -103,5 +112,31 @@ public class SubscriptionFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void animateCard(View view, int delay) {
+
+        view.setAlpha(0f);
+        view.setTranslationY(-80f);
+
+        view.animate()
+                .alpha(1f)
+                .translationY(0f)
+                .setDuration(500)
+                .setStartDelay(delay)
+                .start();
+    }
+
+    private void animatePage(View view) {
+
+        view.setAlpha(0f);
+        view.setTranslationY(30f);
+
+        view.animate()
+                .alpha(1f)
+                .translationY(0f)
+                .setDuration(500)
+                .setInterpolator(new android.view.animation.DecelerateInterpolator())
+                .start();
     }
 }
