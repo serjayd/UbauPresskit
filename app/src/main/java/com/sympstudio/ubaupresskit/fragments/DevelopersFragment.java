@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,10 +27,13 @@ public class DevelopersFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
 
+        // Animation for Page
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+
+        view.startAnimation(animPage);
 
         ListView listView = view.findViewById(R.id.developer_cards);
-
-        animatePage(view);
+        listView.setNestedScrollingEnabled(true);
 
 
         int[] images = {
@@ -85,16 +90,4 @@ public class DevelopersFragment extends Fragment {
         return view;
     }
 
-    private void animatePage(View view) {
-
-        view.setAlpha(0f);
-        view.setTranslationY(30f);
-
-        view.animate()
-                .alpha(1f)
-                .translationY(0f)
-                .setDuration(500)
-                .setInterpolator(new android.view.animation.DecelerateInterpolator())
-                .start();
-    }
 }

@@ -28,6 +28,8 @@ public class ContactFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
+        TextView viewRecentMessages = view.findViewById(R.id.contact_view_recent_messages);
+
         EditText nameInput = view.findViewById(R.id.contact_name_input);
         EditText emailInput = view.findViewById(R.id.contact_email_input);
         EditText messageInput = view.findViewById(R.id.contact_message_input);
@@ -101,6 +103,15 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        viewRecentMessages.setOnClickListener(v -> {
+            getParentFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, new MessagesFragment())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
         return view;
     }
+
 }
