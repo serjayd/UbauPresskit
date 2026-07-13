@@ -15,23 +15,23 @@
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:id="@+id/team_title"
           android:orientation="vertical"
-          android:layout_marginBottom="8dp">
+          android:paddingBottom="8dp">
 
          <TextView
+             android:id="@+id/developers_title"
+             style="@style/HeadingOne"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:text="@string/team_title"
-             style="@style/HeadingOne"
-             />
+             android:layout_marginBottom="8dp"/>
+
          <TextView
+             android:id="@+id/developers_subtitle"
+             style="@style/SpanTwo"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:text="@string/team_desc"
-             style="@style/SpanTwo"
-             android:layout_marginTop="30dp"
-             />
+             android:text="@string/team_desc"/>
       </LinearLayout>
 
 

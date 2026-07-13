@@ -8,16 +8,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:background="@drawable/bg_gradient">
 
+        <!-- CHANGED: layout_height set to match_parent to allow weight expansions -->
         <LinearLayout
             android:id="@+id/main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingTop="48dp">
 
@@ -51,6 +52,7 @@
                     android:contentDescription="@string/menu"/>
             </LinearLayout>
 
+            <!-- CHANGED: layout_height set to 0dp and layout_weight set to 1 to take full remaining space -->
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_container"
                 android:layout_width="match_parent"
@@ -94,7 +96,7 @@
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"

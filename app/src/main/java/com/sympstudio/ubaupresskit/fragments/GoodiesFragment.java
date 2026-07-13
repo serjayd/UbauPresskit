@@ -1,7 +1,7 @@
 package com.sympstudio.ubaupresskit.fragments;
 import android.view.View;
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import static com.sympstudio.ubaupresskit.R.*;
 
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -27,20 +29,36 @@ public class GoodiesFragment extends Fragment {
         // Get the Goodies Fragment Layout
         View view = inflater.inflate(R.layout.fragment_goodies, container, false);
 
-        View card1 = view.findViewById(R.id.goodies_card_1_container);
-        View card2 = view.findViewById(R.id.goodies_card_2_container);
-        View card3 = view.findViewById(R.id.goodies_card_4_container);
-
-        animateCard(card1, 0);
-        animateCard(card2, 150);
-        animateCard(card3, 300);
-        animatePage(view);
-
         // Get the IDs of all buttons
         AppCompatButton btnSubscribe = view.findViewById(R.id.goodies_button_subscribe);
 
         // onClick method to transfer to Subscription Fragment (e.g., page)
+
         btnSubscribe.setOnClickListener(v -> openSubscriptionPage());
+
+        // Containers for Animation
+        LinearLayout card1 = view.findViewById(R.id.goodies_card_1_container);
+        LinearLayout card2 = view.findViewById(R.id.goodies_card_2_container);
+        LinearLayout card3 = view.findViewById(R.id.goodies_card_4_container);
+
+        // Animation for Cards
+        Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim1.setStartOffset(0);
+
+        Animation anim2 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim2.setStartOffset(150);
+
+        Animation anim3 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim3.setStartOffset(300);
+
+        // Animation for Page
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), anim.fade_in);
+
+        card1.startAnimation(anim1);
+        card2.startAnimation(anim2);
+        card3.startAnimation(anim3);
+        view.startAnimation(animPage);
+
 
         return view;
     }
@@ -55,29 +73,4 @@ public class GoodiesFragment extends Fragment {
         }
     }
 
-    private void animateCard(View view, int delay) {
-
-        view.setAlpha(0f);
-        view.setTranslationY(80f);
-
-        view.animate()
-                .alpha(1f)
-                .translationY(0f)
-                .setDuration(500)
-                .setStartDelay(delay)
-                .start();
-    }
-
-    private void animatePage(View view) {
-
-        view.setAlpha(0f);
-        view.setTranslationY(30f);
-
-        view.animate()
-                .alpha(1f)
-                .translationY(0f)
-                .setDuration(500)
-                .setInterpolator(new android.view.animation.DecelerateInterpolator())
-                .start();
-    }
 }

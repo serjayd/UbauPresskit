@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
 
+
             if (id == R.id.nav_home) {
                  replaceFragment(new HomeFragment());
             } else if (id == R.id.nav_media) {

@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -31,7 +33,6 @@ public class SubscriptionFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_subscription, container, false);
-        LinearLayout subscriptions_options = view.findViewById(R.id.subscription_options_container);
         EditText nameInput = view.findViewById(R.id.name_input);
         EditText emailInput = view.findViewById(R.id.email_input);
 
@@ -44,10 +45,24 @@ public class SubscriptionFragment extends Fragment {
 
         Button subscribeButton = view.findViewById(R.id.subscribe_button);
 
-        animateCard(nameInput, 0);
-        animateCard(emailInput, 150);
-        animateCard(subscriptions_options, 300);
-        animatePage(view);
+        // Containers for Animation
+        LinearLayout card1 = view.findViewById(R.id.subscription_form_name);
+        LinearLayout card2 = view.findViewById(R.id.subscription_form_email);
+        LinearLayout card3 = view.findViewById(R.id.subscription_options_container);
+
+        // Animation for Cards
+        Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_down);
+        anim1.setStartOffset(0);
+
+        Animation anim2 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_down);
+        anim2.setStartOffset(150);
+
+        Animation anim3 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_down);
+        anim3.setStartOffset(300);
+
+        card1.startAnimation(anim1);
+        card2.startAnimation(anim2);
+        card3.startAnimation(anim3);
 
         subscribeButton.setOnClickListener(v -> {
 
@@ -114,29 +129,4 @@ public class SubscriptionFragment extends Fragment {
         return view;
     }
 
-    private void animateCard(View view, int delay) {
-
-        view.setAlpha(0f);
-        view.setTranslationY(-80f);
-
-        view.animate()
-                .alpha(1f)
-                .translationY(0f)
-                .setDuration(500)
-                .setStartDelay(delay)
-                .start();
-    }
-
-    private void animatePage(View view) {
-
-        view.setAlpha(0f);
-        view.setTranslationY(30f);
-
-        view.animate()
-                .alpha(1f)
-                .translationY(0f)
-                .setDuration(500)
-                .setInterpolator(new android.view.animation.DecelerateInterpolator())
-                .start();
-    }
 }
