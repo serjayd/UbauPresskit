@@ -21,4 +21,3 @@ gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref =
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-
