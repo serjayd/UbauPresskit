@@ -1,14 +1,841 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.PresskitFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="16dp">
 
-</FrameLayout>
+        <!-- Page title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/presskit_title"
+            style="@style/HeadingOne" />
+
+        <!-- Factsheet card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/glass_card"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Developer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_developer_label"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:alpha="0.6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_developer"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_white"
+                android:alpha="0.1" />
+
+            <!-- Location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_location_label"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:alpha="0.6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_location"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_white"
+                android:alpha="0.1" />
+
+            <!-- Publisher -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_publisher_label"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:alpha="0.6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_publisher"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_white"
+                android:alpha="0.1" />
+
+            <!-- Genre -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_genre_label"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:alpha="0.6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_genre"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_white"
+                android:alpha="0.1" />
+
+            <!-- Price -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_price_label"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:alpha="0.6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_price"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_white"
+                android:alpha="0.1" />
+
+            <!-- Release date -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_release_label"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:alpha="0.6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_release"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_white"
+                android:alpha="0.1" />
+
+            <!-- Platforms -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_platforms_label"
+                    style="@style/SpanTwo"
+                    android:textColor="@color/text_white"
+                    android:alpha="0.6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_platforms"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Accordion list -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <!-- SYNOPSIS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerSynopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_synopsis"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronSynopsis"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentSynopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_game_description"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- VIDEOS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_videos"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronVideos"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_videos_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- IMAGES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_images"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronImages"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_images_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- CHARACTER ART -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerCharacterArt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_character_art"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronCharacterArt"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentCharacterArt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_character_art_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- KEY ART -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerKeyArt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_key_art"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronKeyArt"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentKeyArt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_key_art_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- GIFS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerGifs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_gifs"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronGifs"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentGifs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_gifs_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- BRAND GUIDELINES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_brand"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronBrand"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_brand_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- PHYSICAL EDITION -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerPhysical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_physical"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronPhysical"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentPhysical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_physical_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- CONTENT CREATORS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerCreators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_creators"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronCreators"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentCreators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_creators_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- CREDITS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_credits"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevronCredits"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_down"
+                        android:contentDescription="@string/presskit_expand_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presskit_credits_body"
+                    style="@style/BodyTwo"
+                    android:textColor="@color/text_white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Download button -->
+        <TextView
+            android:id="@+id/btnDownloadPresskit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/presskit_download_btn"
+            android:background="@drawable/bg_gradient_btn"
+            android:textColor="@color/bg_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_download"
+            android:drawablePadding="10dp" />
+
+    </LinearLayout>
+
+</ScrollView>

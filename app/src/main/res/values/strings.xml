@@ -26,6 +26,48 @@
 
     <!-- Presskit Page -->
 
+    <string name="presskit_title">Factsheet</string>
+
+    <string name="presskit_developer_label">DEVELOPER</string>
+    <string name="presskit_developer">Absent Mind Studio</string>
+    <string name="presskit_location_label">LOCATION</string>
+    <string name="presskit_location">London, UK</string>
+    <string name="presskit_publisher_label">PUBLISHER</string>
+    <string name="presskit_publisher">—</string>
+    <string name="presskit_genre_label">GENRE</string>
+    <string name="presskit_price_label">PRICE</string>
+    <string name="presskit_price">£15.99</string>
+    <string name="presskit_release_label">RELEASE DATE</string>
+    <string name="presskit_release">July 28, 2026</string>
+    <string name="presskit_platforms_label">PLATFORMS</string>
+    <string name="presskit_platforms">PC · PS5</string>
+
+    <string name="presskit_synopsis">SYNOPSIS</string>
+    <string name="presskit_videos">VIDEOS</string>
+    <string name="presskit_images">IMAGES</string>
+    <string name="presskit_character_art">CHARACTER ART</string>
+    <string name="presskit_key_art">KEY ART</string>
+    <string name="presskit_gifs">GIFS</string>
+    <string name="presskit_brand">BRAND GUIDELINES</string>
+    <string name="presskit_physical">PHYSICAL EDITION</string>
+    <string name="presskit_creators">CONTENT CREATORS</string>
+    <string name="presskit_credits">CREDITS</string>
+
+    <string name="presskit_videos_body">Gameplay trailers and cinematic teasers are available in the full press kit download.</string>
+    <string name="presskit_images_body">High-resolution screenshots showcasing key moments and environments.</string>
+    <string name="presskit_character_art_body">Concept and final character designs from The Ubau Techno Thief.</string>
+    <string name="presskit_key_art_body">Official key art and promotional artwork for the game.</string>
+    <string name="presskit_gifs_body">Short looping clips highlighting stealth mechanics and atmosphere.</string>
+    <string name="presskit_brand_body">Logos, colour palette and typography usage rules for press use.</string>
+    <string name="presskit_physical_body">Details about the collector\'s physical edition and its contents.</string>
+    <string name="presskit_creators_body">Guidelines and assets for streamers and content creators.</string>
+    <string name="presskit_credits_body">Developed and published by Absent Mind Studio, London, UK.</string>
+
+    <string name="presskit_download_btn">DOWNLOAD FULL PRESS KIT</string>
+
+    <string name="presskit_folder_icon">Folder icon</string>
+    <string name="presskit_expand_icon">Expand section</string>
+
 
     <!-- Media Page -->
 
