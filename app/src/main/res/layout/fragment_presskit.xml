@@ -248,7 +248,7 @@
             android:orientation="vertical"
             android:layout_marginTop="16dp">
 
-            <!-- SYNOPSIS -->
+            <!-- ============ SYNOPSIS ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -305,7 +305,7 @@
 
             </LinearLayout>
 
-            <!-- VIDEOS -->
+            <!-- ============ VIDEOS ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -348,21 +348,64 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentVideos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_videos_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Video 1"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Video 2"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Video 3"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/btnZipVideos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All Videos as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- IMAGES -->
+            <!-- ============ IMAGES ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -405,21 +448,214 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentImages"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_images_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <!-- Row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 1"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 2"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 3"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 4"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 5"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 6"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 7"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 8"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 5 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 9"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 10"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 6 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 11"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Image 12"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnZipImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All Images as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- CHARACTER ART -->
+            <!-- ============ CHARACTER ART ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -462,21 +698,124 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentCharacterArt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_character_art_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <!-- Row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Character 1"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Character 2"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Character 3"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Character 4"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Character 5"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="Character 6"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnZipCharacter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- KEY ART -->
+            <!-- ============ KEY ART ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -519,21 +858,54 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentKeyArt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_key_art_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Key Art — Landscape"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Key Art — Portrait"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/btnZipKeyArt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- GIFS -->
+            <!-- ============ GIFS ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -576,21 +948,94 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentGifs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_gifs_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <!-- Row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="130dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="GIF 1"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="130dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="GIF 2"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="130dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="GIF 3"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="130dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_placeholder"
+                            android:gravity="center"
+                            android:text="GIF 4"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnZipGifs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- BRAND GUIDELINES -->
+            <!-- ============ BRAND GUIDELINES ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -633,21 +1078,377 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentBrand"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_brand_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <!-- TYPOGRAPHY -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TYPOGRAPHY"
+                        style="@style/SpanThree"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.6"
+                        android:layout_marginBottom="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_placeholder"
+                        android:padding="16dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Orbitron"
+                            android:fontFamily="@font/orbitron_semibold"
+                            android:textColor="@color/text_white"
+                            android:textSize="28sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="14dp">
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:text="Regular"
+                                style="@style/SpanThree"
+                                android:textColor="@color/text_white" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_placeholder"
+                                android:backgroundTint="#55FFFFFF" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:text="Bold"
+                                style="@style/SpanThree"
+                                android:textColor="@color/text_white" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_placeholder"
+                                android:backgroundTint="#CCFFFFFF" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- COLOUR PALETTE -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COLOUR PALETTE"
+                        style="@style/SpanThree"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.6"
+                        android:layout_marginBottom="12dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Bright Orange -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal"
+                                android:layout_marginEnd="16dp">
+
+                                <View
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/bg_circle"
+                                    android:backgroundTint="#FF991C" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bright Orange"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:layout_marginTop="6dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#FF991C"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:alpha="0.6"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <!-- Neon Orange -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal"
+                                android:layout_marginEnd="16dp">
+
+                                <View
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/bg_circle"
+                                    android:backgroundTint="#FF5C00" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Neon Orange"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:layout_marginTop="6dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#FF5C00"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:alpha="0.6"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <!-- Ultramarine Blue -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal"
+                                android:layout_marginEnd="16dp">
+
+                                <View
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/bg_circle"
+                                    android:backgroundTint="#4166F5" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ultramarine Blue"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:layout_marginTop="6dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#4166F5"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:alpha="0.6"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <!-- Alabaster White -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal"
+                                android:layout_marginEnd="16dp">
+
+                                <View
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/bg_circle"
+                                    android:backgroundTint="#FAFAFA" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Alabaster White"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:layout_marginTop="6dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#FAFAFA"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:alpha="0.6"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <!-- Charcoal -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <View
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/bg_circle"
+                                    android:backgroundTint="#4A4A4A" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Charcoal"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:layout_marginTop="6dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#4A4A4A"
+                                    style="@style/SpanThree"
+                                    android:textColor="@color/text_white"
+                                    android:alpha="0.6"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <!-- LOGOS -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOGOS"
+                        style="@style/SpanThree"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.6"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <!-- Logo Dark -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_marginEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:src="@drawable/absent_mind_logo"
+                                android:scaleType="centerInside"
+                                android:background="@drawable/bg_placeholder"
+                                android:padding="8dp"
+                                android:contentDescription="@string/logo" />
+
+                            <TextView
+                                android:id="@+id/btnLogoDark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Download PNG"
+                                style="@style/SpanThree"
+                                android:textColor="@color/text_white"
+                                android:layout_marginTop="8dp"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </LinearLayout>
+
+                        <!-- Logo Light -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_marginStart="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:src="@drawable/absent_mind_logo_trans"
+                                android:scaleType="centerInside"
+                                android:background="@drawable/bg_placeholder"
+                                android:padding="8dp"
+                                android:contentDescription="@string/logo" />
+
+                            <TextView
+                                android:id="@+id/btnLogoLight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Download PNG"
+                                style="@style/SpanThree"
+                                android:textColor="@color/text_white"
+                                android:layout_marginTop="8dp"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnZipBrand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- PHYSICAL EDITION -->
+            <!-- ============ PHYSICAL EDITION ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -690,21 +1491,54 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentPhysical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_physical_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Physical Edition 1"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Physical Edition 2"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/btnZipPhysical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- CONTENT CREATORS -->
+            <!-- ============ CONTENT CREATORS ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -747,21 +1581,74 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentCreators"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_creators_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Watermark-free Trailer"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Overlay Pack"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Banner Template 1"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Banner Template 2"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/btnZipCreators"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- CREDITS -->
+            <!-- ============ CREDITS ============ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -804,17 +1691,303 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/contentCredits"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/presskit_credits_body"
-                    style="@style/BodyTwo"
-                    android:textColor="@color/text_white"
+                    android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <!-- Developer -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Developer"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Absent Mind Studio"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Publisher -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Publisher"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Game Designer -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Game Designer"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rhiannon"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Programmer - Campbell -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Programmer"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Campbell"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Programmer - Mani -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Programmer"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mani"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Programmer - Ktz -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Programmer"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ktz"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Programmer - Florin -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Programmer"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Florin"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Artist - Sadik -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Artist"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sadik"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Artist - Ali -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Artist"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ali"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Artist - Mei Mei -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Artist"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mei Mei"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Artist - Kyrah -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Artist"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kyrah"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Artist - Yohan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Artist"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yohan"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                    <!-- Level Design -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:text="Level Design"
+                            style="@style/SpanTwo"
+                            android:textColor="@color/text_white"
+                            android:alpha="0.6" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            style="@style/BodyTwo"
+                            android:textColor="@color/text_white" />
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
