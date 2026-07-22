@@ -104,6 +104,69 @@
  
     <!-- FAQ Page -->
 
+    <!-- GAMEPLAY -->
+    <string name="faq_title_1">GAMEPLAY</string>
+
+    <string name="faq_question_1">What type of game is The Bleached City?</string>
+    <string name="faq_answer_1">The Bleached City is a story-driven exploration game that combines environmental puzzles, atmospheric world-building, and narrative discovery.</string>
+
+    <string name="faq_question_2">How long is the game?</string>
+    <string name="faq_answer_2">An average playthrough takes around 6–8 hours, depending on your exploration style and how much optional content you discover.</string>
+
+    <string name="faq_question_3">Is there multiplayer?</string>
+    <string name="faq_answer_3">No. The game is designed as a single-player experience focused on immersion and storytelling.</string>
+
+    <string name="faq_question_4">Does the game have controller support?</string>
+    <string name="faq_answer_4">Yes. Full controller support is available alongside keyboard and mouse controls.</string>
+
+    <string name="faq_question_5">Is the game available in my language?</string>
+    <string name="faq_answer_5">The game launches with English support. Additional languages may be added in future updates.</string>
+
+
+    <!-- PURCHASE -->
+    <string name="faq_title_2">PURCHASE</string>
+
+    <string name="faq_purchase_question_1">How do I purchase the game?</string>
+    <string name="faq_purchase_answer_1">The game can be purchased through supported digital storefronts once it becomes available.</string>
+
+    <string name="faq_purchase_question_2">Can I get a refund?</string>
+    <string name="faq_purchase_answer_2">Refunds are handled according to the refund policy of the platform where you purchased the game.</string>
+
+    <string name="faq_purchase_question_3">Will there be a demo?</string>
+    <string name="faq_purchase_answer_3">There are currently no plans for a public demo, but announcements will be shared if that changes.</string>
+
+    <string name="faq_purchase_question_4">Is there a physical edition?</string>
+    <string name="faq_purchase_answer_4">At launch, the game will be available digitally only. A physical edition may be considered in the future.</string>
+
+
+    <!-- GOODIES -->
+    <string name="faq_title_3">GOODIES</string>
+
+    <string name="faq_goodies_question_1">How do I unlock my rewards?</string>
+    <string name="faq_goodies_answer_1">Rewards are unlocked automatically after meeting the required conditions or redeeming the provided code.</string>
+
+    <string name="faq_goodies_question_2">How do I access early access?</string>
+    <string name="faq_goodies_answer_2">Eligible players will receive access instructions via the email associated with their purchase or registration.</string>
+
+    <string name="faq_goodies_question_3">I did not receive my reward email. What should I do?</string>
+    <string name="faq_goodies_answer_3">Please check your spam folder first. If you still cannot find it, contact our support team with your purchase details.</string>
+
+
+    <!-- TECHNICAL -->
+    <string name="faq_title_4">TECHNICAL</string>
+
+    <string name="faq_technical_question_1">What are the system requirements?</string>
+    <string name="faq_technical_answer_1">The minimum and recommended PC requirements will be listed on the games official store page before release.</string>
+
+    <string name="faq_technical_question_2">The game will not launch. What should I do?</string>
+    <string name="faq_technical_answer_2">Verify the game files, update your graphics drivers, and ensure your system meets the minimum requirements. If the issue persists, contact support.</string>
+
+    <string name="faq_technical_question_3">How do I report a bug?</string>
+    <string name="faq_technical_answer_3">You can report bugs through our official support page or community channels. Including screenshots and system information helps us investigate faster.</string>
+
+
+
+
 
     <!-- Header -->
     <string name="home">Home</string>

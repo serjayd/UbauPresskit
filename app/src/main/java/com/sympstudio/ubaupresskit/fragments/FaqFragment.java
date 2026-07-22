@@ -1,66 +1,132 @@
 package com.sympstudio.ubaupresskit.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.sympstudio.ubaupresskit.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FaqFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class FaqFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FaqFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FaqFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FaqFragment newInstance(String param1, String param2) {
-        FaqFragment fragment = new FaqFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_faq, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_faq, container, false);
+
+        RecyclerView gameplayRecycler = view.findViewById(R.id.gameplayRecycler);
+        RecyclerView purchaseRecycler = view.findViewById(R.id.purchaseRecycler);
+        RecyclerView goodiesRecycler = view.findViewById(R.id.goodiesRecycler);
+        RecyclerView technicalRecycler = view.findViewById(R.id.technicalRecycler);
+
+        gameplayRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        purchaseRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        goodiesRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        technicalRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        gameplayRecycler.setAdapter(new FaqAdapter(getGameplay()));
+        purchaseRecycler.setAdapter(new FaqAdapter(getPurchase()));
+        goodiesRecycler.setAdapter(new FaqAdapter(getGoodies()));
+        technicalRecycler.setAdapter(new FaqAdapter(getTechnical()));
+
+        return view;
+    }
+
+    private List<FaqItem> getGameplay() {
+
+        List<FaqItem> list = new ArrayList<>();
+
+        list.add(new FaqItem(
+                getString(R.string.faq_question_1),
+                getString(R.string.faq_answer_1)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_question_2),
+                getString(R.string.faq_answer_2)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_question_3),
+                getString(R.string.faq_answer_3)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_question_4),
+                getString(R.string.faq_answer_4)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_question_5),
+                getString(R.string.faq_answer_5)));
+
+        return list;
+    }
+
+    private List<FaqItem> getPurchase() {
+
+        List<FaqItem> list = new ArrayList<>();
+
+        list.add(new FaqItem(
+                getString(R.string.faq_purchase_question_1),
+                getString(R.string.faq_purchase_answer_1)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_purchase_question_2),
+                getString(R.string.faq_purchase_answer_2)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_purchase_question_3),
+                getString(R.string.faq_purchase_answer_3)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_purchase_question_4),
+                getString(R.string.faq_purchase_answer_4)));
+
+        return list;
+    }
+
+    private List<FaqItem> getGoodies() {
+
+        List<FaqItem> list = new ArrayList<>();
+
+        list.add(new FaqItem(
+                getString(R.string.faq_goodies_question_1),
+                getString(R.string.faq_goodies_answer_1)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_goodies_question_2),
+                getString(R.string.faq_goodies_answer_2)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_goodies_question_3),
+                getString(R.string.faq_goodies_answer_3)));
+
+        return list;
+    }
+
+    private List<FaqItem> getTechnical() {
+
+        List<FaqItem> list = new ArrayList<>();
+
+        list.add(new FaqItem(
+                getString(R.string.faq_technical_question_1),
+                getString(R.string.faq_technical_answer_1)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_technical_question_2),
+                getString(R.string.faq_technical_answer_2)));
+
+        list.add(new FaqItem(
+                getString(R.string.faq_technical_question_3),
+                getString(R.string.faq_technical_answer_3)));
+
+        return list;
     }
 }
