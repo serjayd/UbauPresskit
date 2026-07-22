@@ -32,7 +32,8 @@
                 android:id="@+id/subscription_subtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/SpanTwo"
+                style="@style/BodyTwo"
+                android:textColor="@color/text_primary"
                 android:text="@string/subscription_subtitle" />
         </LinearLayout>
 
