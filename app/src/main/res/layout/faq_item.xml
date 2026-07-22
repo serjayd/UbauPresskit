@@ -23,8 +23,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Question"
+            style="@style/BodyThree"
             android:textSize="18sp"
-            style="@style/BodyTwo"
+            android:textColor="@color/text_tertiary"
             />
 
         <ImageView
@@ -44,7 +45,8 @@
         android:paddingEnd="12dp"
         android:paddingBottom="14dp"
         android:visibility="gone"
-        style="@style/BodyTwo"/>
+        style="@style/BodyTwo"
+        android:textColor="@color/text_tertiary"/>
 
     <View
         android:id="@+id/divider"

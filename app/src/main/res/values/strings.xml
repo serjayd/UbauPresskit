@@ -148,9 +148,9 @@
     <!-- FAQ Page -->
 
     <!-- GAMEPLAY -->
-    <string name="faq_title_1">GAMEPLAY</string>
+    <string name="faq_title_1">Gameplay</string>
 
-    <string name="faq_question_1">What type of game is The Bleached City?</string>
+    <string name="faq_question_1">What type of game is the Ubau?</string>
     <string name="faq_answer_1">The Bleached City is a story-driven exploration game that combines environmental puzzles, atmospheric world-building, and narrative discovery.</string>
 
     <string name="faq_question_2">How long is the game?</string>
@@ -167,7 +167,7 @@
 
 
     <!-- PURCHASE -->
-    <string name="faq_title_2">PURCHASE</string>
+    <string name="faq_title_2">Purchase</string>
 
     <string name="faq_purchase_question_1">How do I purchase the game?</string>
     <string name="faq_purchase_answer_1">The game can be purchased through supported digital storefronts once it becomes available.</string>
@@ -183,7 +183,7 @@
 
 
     <!-- GOODIES -->
-    <string name="faq_title_3">GOODIES</string>
+    <string name="faq_title_3">Goodies</string>
 
     <string name="faq_goodies_question_1">How do I unlock my rewards?</string>
     <string name="faq_goodies_answer_1">Rewards are unlocked automatically after meeting the required conditions or redeeming the provided code.</string>
@@ -196,7 +196,7 @@
 
 
     <!-- TECHNICAL -->
-    <string name="faq_title_4">TECHNICAL</string>
+    <string name="faq_title_4">Technical</string>
 
     <string name="faq_technical_question_1">What are the system requirements?</string>
     <string name="faq_technical_answer_1">The minimum and recommended PC requirements will be listed on the games official store page before release.</string>
