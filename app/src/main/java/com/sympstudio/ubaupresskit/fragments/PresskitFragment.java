@@ -53,7 +53,7 @@ public class PresskitFragment extends Fragment {
     // Opens or closes a section when its header is tapped
     private void setupAccordion(View view, int headerId, int contentId, int chevronId) {
         View header = view.findViewById(headerId);
-        TextView content = view.findViewById(contentId);
+        View content = view.findViewById(contentId);
         ImageView chevron = view.findViewById(chevronId);
 
         if (header == null || content == null || chevron == null) {
