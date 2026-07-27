@@ -1,14 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.MediaFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- Trailer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRAILER"
+            style="@style/HeadingOne"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/trailerImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_placeholder"
+            android:scaleType="centerCrop"/>
+
+
+        <!-- Videos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIDEOS"
+            style="@style/HeadingOne"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/video1"
+                    android:layout_width="250dp"
+                    android:background="@drawable/bg_placeholder"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <ImageView
+                    android:id="@+id/video2"
+                    android:layout_width="250dp"
+                    android:background="@drawable/bg_placeholder"
+                    android:layout_height="150dp"
+                   />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <!-- Screenshots -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCREENSHOTS"
+            style="@style/HeadingOne"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/screen1"
+                    android:layout_width="250dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/bg_placeholder"
+                    android:layout_marginEnd="10dp"/>
+
+                <ImageView
+                    android:id="@+id/screen2"
+                    android:layout_width="250dp"
+                    android:background="@drawable/bg_placeholder"
+                    android:layout_height="150dp"
+
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</ScrollView>
