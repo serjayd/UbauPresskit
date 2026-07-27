@@ -24,14 +24,21 @@ The project demonstrates a complete mobile development lifecycle, implementing r
 
 ```text
 ├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/absentmindstudio/ubaupresskit/
-│   │   │   │   ├── data/          # SQLite database helpers and models
-│   │   │   │   ├── ui/            # Activities, Fragments, and Adapters
-│   │   │   │   └── utils/         # Helper functions and constants
-│   │   │   └── res/
-│   │   │       ├── layout/        # XML UI layouts
-│   │   │       ├── drawable/      # Game assets, icons, and branding
-│   │   │       └── values/        # Strings, styles, and color palettes
-└── README.md
+│   ├── manifests/             # AndroidManifest.xml
+│   ├── kotlin+java/
+│   │   └── com.sympstudio.ubaupresskit/
+│   │       ├── fragments/     # UI Fragments for modular screen components
+│   │       ├── DBHelper       # SQLite database management helper class
+│   │       ├── MainActivity   # Core container activity
+│   │       └── SplashActivity # Initial loading/branding screen
+│   ├── res/                   # Application resources
+│   │   ├── anim/              # Custom UI animations
+│   │   ├── drawable/          # Graphic assets, icons, and media kits
+│   │   ├── font/              # Custom typography styles
+│   │   ├── layout/            # XML layout configurations
+│   │   ├── menu/              # Navigation and menu resource definitions
+│   │   ├── mipmap/            # Application launcher icons
+│   │   ├── values/            # Colors, strings, and style definitions
+│   │   └── xml/               # Additional application configurations
+│   └── keepRules              # ProGuard / R8 optimization rules
+└── Gradle Scripts/            # Build configuration files
