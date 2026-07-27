@@ -53,11 +53,19 @@ public class HomeFragment extends Fragment {
     }
 
     private void openUrl(String url) {
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
-        } catch (Exception e) {
-            Toast.makeText(getContext(), "Bağlantı açılamadı", Toast.LENGTH_SHORT).show();
-        }
+        new androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                .setTitle("External Website")
+                .setMessage("You are about to leave the app and open an external website. Do you want to continue?")
+                .setPositiveButton("Proceed", (dialog, which) -> {
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent);
+                    } catch (Exception e) {
+                        Toast.makeText(getContext(), "Unable to open the link", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
+                .setCancelable(true)
+                .show();
     }
 }
