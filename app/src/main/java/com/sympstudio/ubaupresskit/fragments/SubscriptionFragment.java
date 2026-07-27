@@ -24,10 +24,18 @@ import androidx.fragment.app.FragmentManager;
 import com.sympstudio.ubaupresskit.DBHelper;
 import com.sympstudio.ubaupresskit.R;
 
+import java.util.regex.Pattern;
+
 public class SubscriptionFragment extends Fragment {
 
     public SubscriptionFragment() {
     }
+
+    // Regular Expressions
+    private static final Pattern NAME_PATTERN = Pattern.compile("^[a-zA-Z\\s'-]{2,50}$");
+    private static final Pattern EMAIL_PATTERN = Pattern.compile(
+            "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+    );
 
     @Nullable
     @Override
@@ -68,22 +76,21 @@ public class SubscriptionFragment extends Fragment {
 
             String name = nameInput.getText().toString().trim();
             String email = emailInput.getText().toString().trim();
+
             boolean option1Checked = option1.isChecked();
             boolean option3Checked = option3.isChecked();
             boolean option4Checked = option4.isChecked();
 
-
             // Validate Name
-            if (name.isEmpty() || name.length() < 2) {
-                nameError.setText("Name must contain at least 2 characters!");
+            if (name.isEmpty() || !NAME_PATTERN.matcher(name).matches()) {
+                nameError.setText("Please enter your name!");
             }
             // Validate Email is not empty
             else if (email.isEmpty()) {
                 emailError.setText("Please enter your email!");
             }
             // Check if email matches standard patterns
-            // !CHANGE TO REGEX!
-            else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            else if (!EMAIL_PATTERN.matcher(email).matches()) {
                 emailError.setText("Please enter a valid email address!");
             }
             // Send Data
