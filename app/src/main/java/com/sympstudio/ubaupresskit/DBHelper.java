@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.Cursor;
 
 
 import androidx.annotation.Nullable;
@@ -73,6 +74,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
 
         return result != -1;
+    }
+    public Cursor getAllMessages() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM Contacts", null);
     }
 }
 
