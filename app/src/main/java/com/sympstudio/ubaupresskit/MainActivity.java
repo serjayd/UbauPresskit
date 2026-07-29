@@ -2,6 +2,9 @@ package com.sympstudio.ubaupresskit;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -30,10 +33,27 @@ public class MainActivity extends AppCompatActivity {
         ImageButton menuButton = findViewById(R.id.menuButton);
         NavigationView navigationView = findViewById(R.id.navigationView);
 
+        ImageView navLogo = findViewById(R.id.logo);
+        TextView footerSympLink = findViewById(R.id.footer_symp_link);
+
+        navLogo.setOnClickListener(v -> {
+            replaceFragment(new HomeFragment());
+            navigationView.setCheckedItem(R.id.nav_home);
+        });
+
         // Open burger Menu
         menuButton.setOnClickListener(v -> {
             drawerLayout.openDrawer(GravityCompat.START);
         });
+
+        footerSympLink.setPaintFlags(footerSympLink.getPaintFlags() | android.graphics.Paint.UNDERLINE_TEXT_FLAG);
+
+        footerSympLink.setOnClickListener(v -> {
+            replaceFragment(new DevelopersFragment());
+            navigationView.setCheckedItem(R.id.nav_developers);
+        });
+
+
 
         // Open Home Fragment as the app opens
         if (savedInstanceState == null) {
