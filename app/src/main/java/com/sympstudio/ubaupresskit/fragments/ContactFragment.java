@@ -18,10 +18,17 @@ import androidx.fragment.app.FragmentManager;
 import com.sympstudio.ubaupresskit.DBHelper;
 import com.sympstudio.ubaupresskit.R;
 
+import java.util.regex.Pattern;
+
 public class ContactFragment extends Fragment {
 
     public ContactFragment() {
     }
+
+    private static final Pattern NAME_PATTERN = Pattern.compile("^[a-zA-Z\\s'-]{2,50}$");
+    private static final Pattern EMAIL_PATTERN = Pattern.compile(
+            "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+    );
 
     @Nullable
     @Override
@@ -52,7 +59,7 @@ public class ContactFragment extends Fragment {
             messageError.setText("");
 
             // Validate Name
-            if (name.isEmpty() || name.length() < 2) {
+            if (name.isEmpty() || !NAME_PATTERN.matcher(name).matches()) {
                 nameError.setText("Name must contain at least 2 characters!");
             }
             // Validate Email is not empty
@@ -60,7 +67,7 @@ public class ContactFragment extends Fragment {
                 emailError.setText("Please enter your email!");
             }
             // Check if email matches standard patterns
-            else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            else if (!EMAIL_PATTERN.matcher(email).matches()) {
                 emailError.setText("Please enter a valid email address!");
             }
             // Validate Message
