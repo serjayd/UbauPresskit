@@ -36,7 +36,9 @@
                     android:layout_height="40dp"
                     android:src="@drawable/logo"
                     android:contentDescription="@string/logo"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true" />
 
                 <Space
                     android:layout_width="0dp"
@@ -87,6 +89,7 @@
                     android:textColor="@color/blue_dark"/>
 
                 <TextView
+                    android:id="@+id/footer_symp_link"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/footer_copyright"
