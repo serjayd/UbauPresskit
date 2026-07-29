@@ -212,15 +212,15 @@
 
 
     <!-- Header -->
-    <string name="home">Home</string>
-    <string name="goodies">Goodies</string>
-    <string name="subscription">Subscription</string>
-    <string name="media">Media</string>
-    <string name="developers">Meet Developers</string>
-    <string name="team">Our Studio</string>
-    <string name="contact">Contact Us</string>
+    <string name="home">HOME</string>
+    <string name="goodies">GOODIES</string>
+    <string name="subscription">SUBSCRIPTION</string>
+    <string name="media">MEDIA</string>
+    <string name="developers">APP DEVELOPERS</string>
+    <string name="team">OUR STUDIO</string>
+    <string name="contact">CONTACT US</string>
     <string name="faq">FAQ</string>
-    <string name="presskit">Presskit</string>
+    <string name="presskit">PRESSKIT</string>
 
     <string name="logo">Logo</string>
     <string name="menu">Menu</string>
