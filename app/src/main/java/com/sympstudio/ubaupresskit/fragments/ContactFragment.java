@@ -5,6 +5,8 @@ import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -37,6 +39,10 @@ public class ContactFragment extends Fragment {
 
         TextView viewRecentMessages = view.findViewById(R.id.contact_view_recent_messages);
 
+        View card1 = view.findViewById(R.id.contact_form_name);
+        View card2 = view.findViewById(R.id.contact_form_email);
+        View card3 = view.findViewById(R.id.contact_form_message);
+
         EditText nameInput = view.findViewById(R.id.contact_name_input);
         EditText emailInput = view.findViewById(R.id.contact_email_input);
         EditText messageInput = view.findViewById(R.id.contact_message_input);
@@ -46,6 +52,28 @@ public class ContactFragment extends Fragment {
         TextView messageError = view.findViewById(R.id.contact_message_error);
 
         Button contactButton = view.findViewById(R.id.contact_button);
+
+        // Animation for Cards
+        Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim1.setStartOffset(0);
+
+        Animation anim2 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim2.setStartOffset(150);
+
+        Animation anim3 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim3.setStartOffset(300);
+
+        Animation anim4 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim4.setStartOffset(450);
+
+        // Animation for Page
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+
+        card1.startAnimation(anim1);
+        card2.startAnimation(anim2);
+        card3.startAnimation(anim3);
+        contactButton.startAnimation(anim4);
+        view.startAnimation(animPage);
 
         contactButton.setOnClickListener(v -> {
 

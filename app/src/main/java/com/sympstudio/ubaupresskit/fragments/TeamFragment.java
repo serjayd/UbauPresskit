@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ListView;
 
 import com.sympstudio.ubaupresskit.R;
@@ -21,6 +23,11 @@ public class TeamFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_team, container, false);
+
+        // Animation for Page
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+
+        view.startAnimation(animPage);
 
 
         ListView listView = view.findViewById(R.id.team_cards);

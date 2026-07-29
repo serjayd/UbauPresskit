@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -29,6 +31,10 @@ public class MessagesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_messages,
                 container,
                 false);
+
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+
+        view.startAnimation(animPage);
 
         LinearLayout messagesContainer =
                 view.findViewById(R.id.messages_container);

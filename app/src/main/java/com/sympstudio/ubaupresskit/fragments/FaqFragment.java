@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -28,6 +30,28 @@ public class FaqFragment extends Fragment {
         RecyclerView purchaseRecycler = view.findViewById(R.id.purchaseRecycler);
         RecyclerView goodiesRecycler = view.findViewById(R.id.goodiesRecycler);
         RecyclerView technicalRecycler = view.findViewById(R.id.technicalRecycler);
+
+        Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim1.setStartOffset(0);
+
+        Animation anim2 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim2.setStartOffset(150);
+
+        Animation anim3 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim3.setStartOffset(300);
+
+        Animation anim4 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim4.setStartOffset(450);
+
+        // Animation for Page
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+
+        // Trigger animations
+        gameplayRecycler.startAnimation(anim1);
+        purchaseRecycler.startAnimation(anim2);
+        goodiesRecycler.startAnimation(anim3);
+        technicalRecycler.startAnimation(anim4);
+        view.startAnimation(animPage);
 
         gameplayRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         purchaseRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
