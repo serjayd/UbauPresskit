@@ -79,5 +79,36 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT * FROM Contacts", null);
     }
+    public boolean updateContactMessage(int id, String name, String email, String message) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("name", name);
+        values.put("email", email);
+        values.put("message", message);
+
+        int rowsAffected = db.update(
+                "Contacts",
+                values,
+                "id = ?",
+                new String[]{String.valueOf(id)}
+        );
+
+        db.close();
+        return rowsAffected > 0;
+    }
+
+    public boolean deleteContactMessage(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        int rowsAffected = db.delete(
+                "Contacts",
+                "id = ?",
+                new String[]{String.valueOf(id)}
+        );
+
+        db.close();
+        return rowsAffected > 0;
+    }
 }
 
