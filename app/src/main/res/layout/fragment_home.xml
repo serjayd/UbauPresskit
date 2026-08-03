@@ -14,12 +14,10 @@
             android:layout_width="match_parent"
             android:layout_height="420dp">
 
-            <ImageView
+            <VideoView
+                android:id="@+id/homeVideo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/logo"
-                android:src="@drawable/homepage_background_img"
-                android:scaleType="centerCrop" />
+                android:layout_height="match_parent" />
 
             <View
                 android:layout_width="match_parent"
@@ -37,7 +35,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:text="@string/home_video_title_ubau"
                     style="@style/HeadingOne" />
 

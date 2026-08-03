@@ -1,14 +1,15 @@
 package com.sympstudio.ubaupresskit.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Intent;
-import android.net.Uri;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +20,8 @@ import com.sympstudio.ubaupresskit.R;
 public class HomeFragment extends Fragment {
 
     private static final String PS_STORE_URL = "https://store.playstation.com/en-gb/";
+
+    private VideoView homeVideo;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -31,6 +34,21 @@ public class HomeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        // Background trailer video (silent, looping, auto-play)
+        homeVideo = view.findViewById(R.id.homeVideo);
+
+        if (homeVideo != null) {
+            Uri videoUri = Uri.parse("android.resource://" + requireContext().getPackageName()
+                    + "/" + R.raw.trailer1);
+            homeVideo.setVideoURI(videoUri);
+
+            homeVideo.setOnPreparedListener(mediaPlayer -> {
+                mediaPlayer.setVolume(0f, 0f); // mute the audio
+                mediaPlayer.setLooping(true);  // loop the video
+                homeVideo.start();             // auto-play
+            });
+        }
 
         TextView btnBuyNow = view.findViewById(R.id.btnBuyNow);
 
