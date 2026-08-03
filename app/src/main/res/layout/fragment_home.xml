@@ -12,7 +12,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="420dp">
+            android:layout_height="240dp">
 
             <VideoView
                 android:id="@+id/homeVideo"
@@ -21,7 +21,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="125dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                  />
 
@@ -94,6 +94,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/home_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -228,6 +229,7 @@
             android:paddingTop="16dp">
 
             <LinearLayout
+                android:id="@+id/home_testimonal_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -290,6 +292,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/home_buy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
