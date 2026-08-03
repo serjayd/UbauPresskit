@@ -973,16 +973,6 @@
                                 android:padding="8dp"
                                 android:contentDescription="@string/logo" />
 
-                            <TextView
-                                android:id="@+id/btnLogoDark"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Download PNG"
-                                style="@style/SpanThree"
-                                android:textColor="@color/text_white"
-                                android:layout_marginTop="8dp"
-                                android:clickable="true"
-                                android:focusable="true" />
 
                         </LinearLayout>
 
@@ -1004,16 +994,6 @@
                                 android:padding="8dp"
                                 android:contentDescription="@string/logo" />
 
-                            <TextView
-                                android:id="@+id/btnLogoLight"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Download PNG"
-                                style="@style/SpanThree"
-                                android:textColor="@color/text_white"
-                                android:layout_marginTop="8dp"
-                                android:clickable="true"
-                                android:focusable="true" />
 
                         </LinearLayout>
 
