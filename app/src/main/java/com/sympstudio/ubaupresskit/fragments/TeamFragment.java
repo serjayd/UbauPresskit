@@ -35,15 +35,15 @@ public class TeamFragment extends Fragment {
 
         int[] images = {
                 R.drawable.ic_launcher_foreground,
+                R.drawable.campbell,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground
+                R.drawable.florinavatar,
+                R.drawable.sadik,
+                R.drawable.ali,
+                R.drawable.meimei_avatar,
+                R.drawable.kyrah,
+                R.drawable.yohan
         };
 
 
@@ -62,16 +62,16 @@ public class TeamFragment extends Fragment {
 
 
         String[] descriptions = {
-                "Game Designer",
-                "Programmer",
-                "Programmer",
-                "Programmer",
-                "Programmer",
-                "Artist",
-                "Artist",
-                "Artist",
-                "Game Designer",
-                "Artist"
+                "Designed gameplay mechanics, balanced features, and coordinated the overall game vision.",
+                "Implemented core gameplay systems and player controls.",
+                "Developed enemy AI and game logic.",
+                "Integrated UI functionality and managed game state.",
+                "Optimized performance, fixed bugs, and handled technical improvements.",
+                "Created character concept art and visual assets.",
+                "Designed environments, backgrounds, and level artwork.",
+                "Produced animations and visual effects.",
+                "Planned level design, game progression, and feature requirements.",
+                "Designed the user interface and icons for a consistent visual experience."
         };
 
 

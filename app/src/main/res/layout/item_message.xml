@@ -3,55 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#FFFFFF"
-    android:padding="12dp"
-    android:layout_marginBottom="12dp">
+    android:background="@drawable/glass_card"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp">
 
     <TextView
         android:id="@+id/item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white"/>
 
     <TextView
         android:id="@+id/item_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="13sp"
-        android:textColor="#555555"/>
+        android:textColor="@color/text_tertiary"
+        android:layout_marginTop="2dp"/>
 
     <TextView
         android:id="@+id/item_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:layout_marginTop="8dp"/>
+        android:textSize="15sp"
+        android:textColor="@color/text_white"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="14dp">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/item_edit_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_outline_btn"
             android:text="Edit"
-            android:textColor="#FFFFFF"
-            android:background="#2196F3"
-            android:layout_marginEnd="8dp"/>
+            android:textAllCaps="false"
+            android:textColor="@color/text_white" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/item_delete_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
+            android:background="@drawable/bg_gradient_btn"
             android:text="Delete"
-            android:textColor="#FFFFFF"
-            android:background="#F44336"/>
+            android:textAllCaps="false"
+            android:textColor="@color/text_white" />
 
     </LinearLayout>
 

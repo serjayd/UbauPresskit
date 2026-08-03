@@ -21,6 +21,7 @@
 
         <!-- Factsheet card -->
         <LinearLayout
+            android:id="@+id/presskit_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -250,6 +251,7 @@
 
             <!-- ============ SYNOPSIS ============ -->
             <LinearLayout
+                android:id="@+id/presskit_synopsis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -307,6 +309,7 @@
 
             <!-- ============ VIDEOS ============ -->
             <LinearLayout
+                android:id="@+id/presskit_videos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -383,6 +386,7 @@
 
             <!-- ============ IMAGES ============ -->
             <LinearLayout
+                android:id="@+id/presskit_images"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -466,6 +470,7 @@
 
             <!-- ============ CHARACTER ART ============ -->
             <LinearLayout
+                android:id="@+id/presskit_character_art"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -574,6 +579,7 @@
 
             <!-- ============ KEY ART ============ -->
             <LinearLayout
+                android:id="@+id/presskit_key_art"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -635,7 +641,68 @@
                         android:contentDescription="@string/presskit_key_art"
                         android:layout_marginBottom="12dp" />
 
-                    <!-- Portrait 9:16 image -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="@drawable/bg_placeholder"
+                        android:gravity="center"
+                        android:text="Key Art — Portrait"
+                        android:textColor="@color/text_white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/btnZipKeyArt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outline_btn"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Download All as ZIP"
+                        style="@style/BodyTwo"
+                        android:textColor="@color/text_white"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ============ GIFS ============ -->
+            <LinearLayout
+                android:id="@+id/presskit_gifs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/headerGifs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_folder"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/presskit_folder_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/presskit_gifs"
+                        style="@style/SpanTwo"
+                        android:textColor="@color/green_base"
+                        android:textStyle="bold" />
+
                     <ImageView
                         android:layout_width="220dp"
                         android:layout_height="390dp"
@@ -651,6 +718,7 @@
 
             <!-- ============ BRAND GUIDELINES ============ -->
             <LinearLayout
+                android:id="@+id/presskit_brand"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"

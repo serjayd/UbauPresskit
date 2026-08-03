@@ -6,14 +6,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.Cursor;
 
-
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "ubauDB";
     private static final int DATABASE_VERSION = 3;
-
 
     public DBHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -54,13 +52,11 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put("concept_art_pack", option3);
         values.put("exclusive_wallpapers", option4);
 
-
         long result = db.insert("Subscribers", null, values);
-
         db.close();
-
         return result != -1;
     }
+
     public boolean insertContactMessage(String name, String email, String message) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -70,15 +66,15 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put("message", message);
 
         long result = db.insert("Contacts", null, values);
-
         db.close();
-
         return result != -1;
     }
+
     public Cursor getAllMessages() {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT * FROM Contacts", null);
     }
+
     public boolean updateContactMessage(int id, String name, String email, String message) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -111,4 +107,3 @@ public class DBHelper extends SQLiteOpenHelper {
         return rowsAffected > 0;
     }
 }
-

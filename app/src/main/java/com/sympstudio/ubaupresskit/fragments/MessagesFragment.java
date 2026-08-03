@@ -76,65 +76,28 @@ public class MessagesFragment extends Fragment {
     }
 
     // Build one message card using plain LinearLayout, TextView and Button
+
     private View buildCard(int id, String name, String email, String message) {
 
-        LinearLayout card = new LinearLayout(ctx);
-        card.setOrientation(LinearLayout.VERTICAL);
-        card.setBackgroundColor(Color.WHITE);
-        card.setPadding(24, 24, 24, 24);
+        View card = LayoutInflater.from(ctx)
+                .inflate(R.layout.item_message, messagesContainer, false);
 
-        LinearLayout.LayoutParams cardParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        cardParams.bottomMargin = 24;
-        card.setLayoutParams(cardParams);
+        TextView nameView = card.findViewById(R.id.item_name);
+        TextView emailView = card.findViewById(R.id.item_email);
+        TextView messageView = card.findViewById(R.id.item_message);
 
-        TextView nameView = new TextView(ctx);
+        Button editButton = card.findViewById(R.id.item_edit_button);
+        Button deleteButton = card.findViewById(R.id.item_delete_button);
+
         nameView.setText(name);
-        nameView.setTextSize(16);
-        card.addView(nameView);
-
-        TextView emailView = new TextView(ctx);
         emailView.setText(email);
-        emailView.setTextSize(13);
-        emailView.setTextColor(Color.GRAY);
-        card.addView(emailView);
-
-        TextView messageView = new TextView(ctx);
         messageView.setText(message);
-        messageView.setTextSize(14);
-        messageView.setPadding(0, 16, 0, 0);
-        card.addView(messageView);
 
-        LinearLayout buttonRow = new LinearLayout(ctx);
-        buttonRow.setOrientation(LinearLayout.HORIZONTAL);
-        LinearLayout.LayoutParams rowParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        rowParams.topMargin = 16;
-        buttonRow.setLayoutParams(rowParams);
+        editButton.setOnClickListener(v ->
+                showEditDialog(id, name, email, message));
 
-        Button editButton = new Button(ctx);
-        editButton.setText("Edit");
-        editButton.setTextColor(Color.WHITE);
-        editButton.setBackgroundColor(Color.parseColor("#2196F3"));
-        editButton.setOnClickListener(v -> showEditDialog(id, name, email, message));
-
-        Button deleteButton = new Button(ctx);
-        deleteButton.setText("Delete");
-        deleteButton.setTextColor(Color.WHITE);
-        deleteButton.setBackgroundColor(Color.parseColor("#F44336"));
-        deleteButton.setOnClickListener(v -> showDeleteConfirm(id, name));
-
-        LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
-                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
-        buttonParams.rightMargin = 8;
-
-        buttonRow.addView(editButton, buttonParams);
-        buttonRow.addView(deleteButton, new LinearLayout.LayoutParams(
-                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-
-        card.addView(buttonRow);
+        deleteButton.setOnClickListener(v ->
+                showDeleteConfirm(id, name));
 
         return card;
     }
