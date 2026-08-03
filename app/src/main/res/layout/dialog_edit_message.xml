@@ -9,14 +9,24 @@
         android:id="@+id/edit_name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
+        android:hint="Name"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_secondary"
+        android:background="@drawable/glass_card"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
 
     <EditText
         android:id="@+id/edit_email_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_secondary"
+        android:background="@drawable/glass_card"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
 
     <EditText
         android:id="@+id/edit_message_input"
@@ -24,6 +34,11 @@
         android:layout_height="wrap_content"
         android:hint="Message"
         android:inputType="textMultiLine"
-        android:minLines="3"/>
+        android:minLines="3"
+        android:gravity="top|start"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_secondary"
+        android:background="@drawable/glass_card"
+        android:padding="12dp"/>
 
 </LinearLayout>
