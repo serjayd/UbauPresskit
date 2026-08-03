@@ -75,7 +75,7 @@ public class MessagesFragment extends Fragment {
         cursor.close();
     }
 
-    // Build one message card using plain LinearLayout, TextView and Button
+
 
     private View buildCard(int id, String name, String email, String message) {
 
@@ -102,7 +102,7 @@ public class MessagesFragment extends Fragment {
         return card;
     }
 
-    // Simple edit popup built with plain EditText fields
+
     private void showEditDialog(int id, String currentName, String currentEmail, String currentMessage) {
 
         LinearLayout dialogLayout = new LinearLayout(ctx);
