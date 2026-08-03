@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +30,52 @@ public class PresskitFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_presskit, container, false);
+
+        LinearLayout card1 = view.findViewById(R.id.presskit_data);
+        LinearLayout card2 = view.findViewById(R.id.presskit_synopsis);
+        LinearLayout card3 = view.findViewById(R.id.presskit_images);
+        LinearLayout card4 = view.findViewById(R.id.presskit_videos);
+        LinearLayout card5 = view.findViewById(R.id.presskit_character_art);
+        LinearLayout card6 = view.findViewById(R.id.presskit_key_art);
+        LinearLayout card7 = view.findViewById(R.id.presskit_gifs);
+        LinearLayout card8 = view.findViewById(R.id.presskit_brand);
+
+        Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim1.setStartOffset(0);
+
+        Animation anim2 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim2.setStartOffset(0);
+
+        Animation anim3 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim3.setStartOffset(150);
+
+        Animation anim4 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim4.setStartOffset(300);
+
+        Animation anim5 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim5.setStartOffset(450);
+
+        Animation anim6 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim6.setStartOffset(600);
+
+        Animation anim7 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim7.setStartOffset(750);
+
+        Animation anim8 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim8.setStartOffset(900);
+
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+
+        card1.startAnimation(anim1);
+        card2.startAnimation(anim2);
+        card3.startAnimation(anim3);
+        card4.startAnimation(anim4);
+        card5.startAnimation(anim5);
+        card6.startAnimation(anim6);
+        card7.startAnimation(anim7);
+        card8.startAnimation(anim8);
+        view.startAnimation(animPage);
+
 
         // Set up each accordion section (header + content + chevron)
         setupAccordion(view, R.id.headerSynopsis, R.id.contentSynopsis, R.id.chevronSynopsis);

@@ -21,6 +21,7 @@
 
         <!-- Factsheet card -->
         <LinearLayout
+            android:id="@+id/presskit_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -250,6 +251,7 @@
 
             <!-- ============ SYNOPSIS ============ -->
             <LinearLayout
+                android:id="@+id/presskit_synopsis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -307,6 +309,7 @@
 
             <!-- ============ VIDEOS ============ -->
             <LinearLayout
+                android:id="@+id/presskit_videos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -407,6 +410,7 @@
 
             <!-- ============ IMAGES ============ -->
             <LinearLayout
+                android:id="@+id/presskit_images"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -657,6 +661,7 @@
 
             <!-- ============ CHARACTER ART ============ -->
             <LinearLayout
+                android:id="@+id/presskit_character_art"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -817,6 +822,7 @@
 
             <!-- ============ KEY ART ============ -->
             <LinearLayout
+                android:id="@+id/presskit_key_art"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -907,6 +913,7 @@
 
             <!-- ============ GIFS ============ -->
             <LinearLayout
+                android:id="@+id/presskit_gifs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -1037,6 +1044,7 @@
 
             <!-- ============ BRAND GUIDELINES ============ -->
             <LinearLayout
+                android:id="@+id/presskit_brand"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
