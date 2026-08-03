@@ -24,7 +24,7 @@ public class MediaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_media, container, false);
 
         // 2. Use 'View' instead of 'LinearLayout' to avoid ClassCastException
-        View card1 = view.findViewById(R.id.trailerImage);
+        View card1 = view.findViewById(R.id.homeVideo);
         View card2 = view.findViewById(R.id.media_videos);
         View card3 = view.findViewById(R.id.media_images);
 

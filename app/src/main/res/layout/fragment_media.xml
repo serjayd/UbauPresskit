@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Trailer -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,15 +19,12 @@
             android:layout_marginBottom="10dp"
             android:textSize="20sp"/>
 
-        <ImageView
-            android:id="@+id/trailerImage"
+        <VideoView
+            android:id="@+id/homeVideo"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@drawable/bg_placeholder"
-            android:scaleType="centerCrop"/>
+            android:layout_height="240dp" />
 
 
-        <!-- Videos -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,6 +48,7 @@
 
                 <ImageView
                     android:id="@+id/video1"
+                    android:src="@drawable/ic_folder"
                     android:layout_width="250dp"
                     android:background="@drawable/bg_placeholder"
                     android:layout_height="150dp"
@@ -58,6 +56,7 @@
 
                 <ImageView
                     android:id="@+id/video2"
+                    android:src="@drawable/ic_folder"
                     android:layout_width="250dp"
                     android:background="@drawable/bg_placeholder"
                     android:layout_height="150dp"
@@ -67,7 +66,7 @@
         </HorizontalScrollView>
 
 
-        <!-- Screenshots -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,6 +90,7 @@
 
                 <ImageView
                     android:id="@+id/screen1"
+                    android:src="@drawable/img1"
                     android:layout_width="250dp"
                     android:layout_height="150dp"
                     android:background="@drawable/bg_placeholder"
@@ -98,6 +98,15 @@
 
                 <ImageView
                     android:id="@+id/screen2"
+                    android:src="@drawable/img2"
+                    android:layout_width="250dp"
+                    android:background="@drawable/bg_placeholder"
+                    android:layout_height="150dp"
+
+                    />
+                <ImageView
+                    android:id="@+id/screen3"
+                    android:src="@drawable/img3"
                     android:layout_width="250dp"
                     android:background="@drawable/bg_placeholder"
                     android:layout_height="150dp"
