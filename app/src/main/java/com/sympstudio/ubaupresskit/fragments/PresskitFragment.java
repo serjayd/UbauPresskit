@@ -45,7 +45,8 @@ public class PresskitFragment extends Fragment {
         LinearLayout card4 = view.findViewById(R.id.presskit_videos);
         LinearLayout card5 = view.findViewById(R.id.presskit_character_art);
         LinearLayout card6 = view.findViewById(R.id.presskit_key_art);
-        LinearLayout card7 = view.findViewById(R.id.presskit_gifs);
+        LinearLayout card7 = view.findViewById(R.id.presskit_physical);
+
         LinearLayout card8 = view.findViewById(R.id.presskit_brand);
 
         Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
@@ -67,10 +68,11 @@ public class PresskitFragment extends Fragment {
         anim6.setStartOffset(600);
 
         Animation anim7 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
-        anim7.setStartOffset(750);
+        anim7.setStartOffset(900);
+
 
         Animation anim8 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
-        anim8.setStartOffset(900);
+        anim8.setStartOffset(750);
 
         Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
 

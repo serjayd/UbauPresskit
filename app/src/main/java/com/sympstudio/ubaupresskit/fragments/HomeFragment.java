@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -49,6 +52,31 @@ public class HomeFragment extends Fragment {
                 homeVideo.start();             // auto-play
             });
         }
+
+        LinearLayout card1 = view.findViewById(R.id.home_details);
+        LinearLayout card2 = view.findViewById(R.id.home_testimonal_1);
+        LinearLayout card3 = view.findViewById(R.id.home_buy);
+
+        Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
+        anim1.setStartOffset(0);
+
+        Animation anim2 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim2.setStartOffset(150);
+
+        Animation anim3 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_side);
+        anim3.setStartOffset(300);
+
+        Animation anim4 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_down);
+        anim4.setStartOffset(300);
+
+        Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+
+        homeVideo.startAnimation(anim1);
+        card1.startAnimation(anim2);
+        card2.startAnimation(anim3);
+        card3.startAnimation(anim4);
+        view.startAnimation(animPage);
+
 
         TextView btnBuyNow = view.findViewById(R.id.btnBuyNow);
 

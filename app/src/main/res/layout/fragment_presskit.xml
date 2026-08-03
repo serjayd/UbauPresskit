@@ -550,29 +550,6 @@
 
                     </LinearLayout>
 
-                    <!-- Row 2 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="150dp"
-                            android:layout_weight="1"
-                            android:layout_marginEnd="12dp"
-                            android:src="@drawable/character_art"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/bg_placeholder"
-                            android:contentDescription="@string/presskit_character_art" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="150dp"
-                            android:layout_weight="1" />
-
-                    </LinearLayout>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -641,80 +618,10 @@
                         android:contentDescription="@string/presskit_key_art"
                         android:layout_marginBottom="12dp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:background="@drawable/bg_placeholder"
-                        android:gravity="center"
-                        android:text="Key Art — Portrait"
-                        android:textColor="@color/text_white"
-                        android:alpha="0.7"
-                        android:layout_marginBottom="16dp" />
-
-                    <TextView
-                        android:id="@+id/btnZipKeyArt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_outline_btn"
-                        android:gravity="center"
-                        android:padding="14dp"
-                        android:text="Download All as ZIP"
-                        style="@style/BodyTwo"
-                        android:textColor="@color/text_white"
-                        android:clickable="true"
-                        android:focusable="true" />
-
                 </LinearLayout>
 
             </LinearLayout>
 
-            <!-- ============ GIFS ============ -->
-            <LinearLayout
-                android:id="@+id/presskit_gifs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/glass_card"
-                android:layout_marginBottom="12dp">
-
-                <LinearLayout
-                    android:id="@+id/headerGifs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:padding="16dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_folder"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="@string/presskit_folder_icon" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/presskit_gifs"
-                        style="@style/SpanTwo"
-                        android:textColor="@color/green_base"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:layout_width="220dp"
-                        android:layout_height="390dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/content_creators1"
-                        android:scaleType="centerInside"
-                        android:background="@drawable/bg_placeholder"
-                        android:contentDescription="@string/presskit_key_art" />
-
-                </LinearLayout>
-
-            </LinearLayout>
 
             <!-- ============ BRAND GUIDELINES ============ -->
             <LinearLayout
@@ -1118,6 +1025,7 @@
 
             <!-- ============ PHYSICAL EDITION ============ -->
             <LinearLayout
+                android:id="@+id/presskit_physical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -1582,28 +1490,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Yohan"
-                            style="@style/BodyTwo"
-                            android:textColor="@color/text_white" />
-                    </LinearLayout>
-
-                    <!-- Level Design -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp">
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Level Design"
-                            style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
-                            android:alpha="0.6" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="—"
                             style="@style/BodyTwo"
                             android:textColor="@color/text_white" />
                     </LinearLayout>
