@@ -53,7 +53,6 @@ public class ContactFragment extends Fragment {
 
         Button contactButton = view.findViewById(R.id.contact_button);
 
-        // Animation for Cards
         Animation anim1 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
         anim1.setStartOffset(0);
 
@@ -66,7 +65,7 @@ public class ContactFragment extends Fragment {
         Animation anim4 = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
         anim4.setStartOffset(450);
 
-        // Animation for Page
+
         Animation animPage = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
 
         card1.startAnimation(anim1);
@@ -81,28 +80,28 @@ public class ContactFragment extends Fragment {
             String email = emailInput.getText().toString().trim();
             String message = messageInput.getText().toString().trim();
 
-            // Reset previous errors
+
             nameError.setText("");
             emailError.setText("");
             messageError.setText("");
 
-            // Validate Name
+
             if (name.isEmpty() || !NAME_PATTERN.matcher(name).matches()) {
                 nameError.setText("Name must contain at least 2 characters!");
             }
-            // Validate Email is not empty
+
             else if (email.isEmpty()) {
                 emailError.setText("Please enter your email!");
             }
-            // Check if email matches standard patterns
+
             else if (!EMAIL_PATTERN.matcher(email).matches()) {
                 emailError.setText("Please enter a valid email address!");
             }
-            // Validate Message
+
             else if (message.isEmpty() || message.length() < 5) {
                 messageError.setText("Message must contain at least 5 characters!");
             }
-            // Send Data
+
             else {
 
                 DBHelper dbHelper = new DBHelper(requireContext());
@@ -118,7 +117,7 @@ public class ContactFragment extends Fragment {
                             "Thank you, " + name + "! Your message has been sent.",
                             Toast.LENGTH_LONG).show();
 
-                    // Clear inputs on success
+
                     nameInput.setText("");
                     emailInput.setText("");
                     messageInput.setText("");
