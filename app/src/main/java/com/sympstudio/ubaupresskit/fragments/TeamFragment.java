@@ -34,10 +34,10 @@ public class TeamFragment extends Fragment {
         listView.setNestedScrollingEnabled(true);
 
         int[] images = {
-                R.drawable.ic_launcher_foreground,
+                R.drawable.yohan,
                 R.drawable.campbell,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
+                R.drawable.yohan,
+                R.drawable.yohan,
                 R.drawable.florinavatar,
                 R.drawable.sadik,
                 R.drawable.ali,

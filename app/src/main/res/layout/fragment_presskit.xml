@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/presskit_developer_label"
                     style="@style/SpanTwo"
-                    android:textColor="@color/text_white"
+                    android:textColor="@color/text_primary"
                     android:alpha="0.6" />
 
                 <TextView
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/presskit_location_label"
                     style="@style/SpanTwo"
-                    android:textColor="@color/text_white"
+                    android:textColor="@color/text_primary"
                     android:alpha="0.6" />
 
                 <TextView
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/presskit_publisher_label"
                     style="@style/SpanTwo"
-                    android:textColor="@color/text_white"
+                    android:textColor="@color/text_primary"
                     android:alpha="0.6" />
 
                 <TextView
@@ -135,7 +135,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/presskit_genre_label"
                     style="@style/SpanTwo"
-                    android:textColor="@color/text_white"
+                    android:textColor="@color/text_primary"
                     android:alpha="0.6" />
 
                 <TextView
@@ -166,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/presskit_price_label"
                     style="@style/SpanTwo"
-                    android:textColor="@color/text_white"
+                    android:textColor="@color/text_primary"
                     android:alpha="0.6" />
 
                 <TextView
@@ -197,7 +197,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/presskit_release_label"
                     style="@style/SpanTwo"
-                    android:textColor="@color/text_white"
+                    android:textColor="@color/text_primary"
                     android:alpha="0.6" />
 
                 <TextView
@@ -228,7 +228,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/presskit_platforms_label"
                     style="@style/SpanTwo"
-                    android:textColor="@color/text_white"
+                    android:textColor="@color/text_primary"
                     android:alpha="0.6" />
 
                 <TextView
@@ -1222,7 +1222,7 @@
                             android:layout_height="wrap_content"
                             android:text="Developer"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1244,34 +1244,12 @@
                             android:layout_height="wrap_content"
                             android:text="Publisher"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Absent Mind Studio"
-                            style="@style/BodyTwo"
-                            android:textColor="@color/text_white" />
-                    </LinearLayout>
-
-                    <!-- Game Designer -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp">
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Game Designer"
-                            style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
-                            android:alpha="0.6" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Rhiannon"
                             style="@style/BodyTwo"
                             android:textColor="@color/text_white" />
                     </LinearLayout>
@@ -1288,7 +1266,7 @@
                             android:layout_height="wrap_content"
                             android:text="Programmer"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1310,7 +1288,7 @@
                             android:layout_height="wrap_content"
                             android:text="Programmer"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1332,7 +1310,7 @@
                             android:layout_height="wrap_content"
                             android:text="Programmer"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1354,7 +1332,7 @@
                             android:layout_height="wrap_content"
                             android:text="Programmer"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1376,7 +1354,7 @@
                             android:layout_height="wrap_content"
                             android:text="Artist"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1398,7 +1376,7 @@
                             android:layout_height="wrap_content"
                             android:text="Artist"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1420,7 +1398,7 @@
                             android:layout_height="wrap_content"
                             android:text="Artist"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1442,7 +1420,7 @@
                             android:layout_height="wrap_content"
                             android:text="Artist"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1464,7 +1442,7 @@
                             android:layout_height="wrap_content"
                             android:text="Artist"
                             style="@style/SpanTwo"
-                            android:textColor="@color/text_white"
+                            android:textColor="@color/text_primary"
                             android:alpha="0.6" />
                         <TextView
                             android:layout_width="wrap_content"
